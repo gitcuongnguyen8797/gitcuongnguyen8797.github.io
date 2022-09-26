@@ -1,0 +1,28 @@
+.list-progress {
+    &__skills {
+        
+    }
+}
+
+
+.progress-container {
+    margin: 2vh 0;
+
+    .progress-header {
+        display: flex;
+        justify-content: space-between;
+        margin: .75vh 0;
+        color: $text-muted;
+    }
+
+    .progress {
+        padding: 2px;
+        border: 0.1px solid #FFB400;
+        background-color: $bg-white !important;
+    }
+
+    .progress-bar {
+        border-radius: 50px;
+        background-color: $bg-primary !important;
+    }
+}

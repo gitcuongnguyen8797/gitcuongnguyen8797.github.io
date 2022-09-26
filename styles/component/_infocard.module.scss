@@ -1,0 +1,42 @@
+.card-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 123.6%;
+        margin-top: 3vh;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 2vh;
+    }
+
+    &__socials {
+        margin-top: 2vh;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 0;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background-color: #FFB400;
+
+        margin: 0 15px;
+    }
+}
