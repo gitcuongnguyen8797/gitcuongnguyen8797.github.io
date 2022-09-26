@@ -13,10 +13,22 @@ a {
 
 ul {
   list-style-type: none;
+ 
 }
 
 * {
   box-sizing: border-box;
+}
+
+.avatar-image { 
+
+  &--rounded {
+    border-radius: 50%;
+  }
+}
+.btn-primary {
+  border: none !important;
+  background-color: $bg-primary !important;
 }
 
 @media (prefers-color-scheme: dark) {

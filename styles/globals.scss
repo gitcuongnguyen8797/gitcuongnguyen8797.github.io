@@ -1,6 +1,9 @@
-@import './abstracts/variables.module';
-@import './base/reset.module';
-@import './base/typography.module';
+@import 'abstracts/variables.module';
+@import 'base/reset.module';
+@import 'base/typography.module';
 
 
-@import './component/header.module'
+@import 'component/header.module';
+@import 'component/infocard.module';
+@import 'component/leftmenu.module';
+@import 'component/listprogress.module';
