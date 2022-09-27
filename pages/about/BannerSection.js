@@ -20,13 +20,13 @@ export default function BannerSection() {
                     </ul>
                 </div>
                 <div className="banner-content">
-                    <h1>I'm Cuong Nguyen</h1>
+                    <h1>I&apos;m Cuong Nguyen</h1>
                     <h1><span className="txt--yellow">Full-Stack </span>Developer</h1>
-                    <span className="txt--muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                    <span className="txt--muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s</span>
                 </div>
                 <div></div>
             </div>
-            <div className="banner-section__image col-12 col-md-6"> <Image src={require('../../public/images/myavatar.jpg')} /></div>
+            <div className="banner-section__image col-12 col-md-6"> <Image src={require('../../public/images/myavatar.jpg')} alt="PHP Developer" /></div>
         </div>
     )
 }
