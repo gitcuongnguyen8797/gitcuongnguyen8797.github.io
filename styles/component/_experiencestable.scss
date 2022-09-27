@@ -1,0 +1,9 @@
+.experience-item {
+    &__content {
+        color: $text-muted;
+
+        ul {
+            padding-left: 0;
+        }
+    }
+}

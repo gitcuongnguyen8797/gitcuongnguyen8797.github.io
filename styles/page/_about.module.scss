@@ -4,22 +4,17 @@
     padding: 0 5vw;
     background-color: $bg-white;
     height: 60vh;
-
     background-image: url('../../public/images/banner-bg.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size: auto;
-
-
 
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        .banner-menu {
-            
-        }
+        .banner-menu {}
 
         .banner-content {
             margin-bottom: 20vh;
@@ -39,29 +34,5 @@
         &__image {
             display: none !important;
         }
-    }
-}
-
-.experience-item {
-    &__content {
-        color: $text-muted;
-
-        ul {
-            padding-left: 0;
-        }
-    }
-}
-
-.tag-skill {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 0;
-
-    &__label {
-        margin: 2px;
-        padding: 0 9px;
-        background-color: $bg-primary;
-        border-radius: 25px;
     }
 }

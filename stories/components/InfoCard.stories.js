@@ -22,8 +22,6 @@ const props = {
   ]
 }
 
-export const Mobile = Template.bind({});
+export const Default = Template.bind({});
 
-Mobile.args = props
-
-export const Web = Template.bind({})
+Default.args = props

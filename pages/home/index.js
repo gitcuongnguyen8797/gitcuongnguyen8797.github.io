@@ -1,17 +1,11 @@
 import Header from "@/components/Header";
-
-const menuHeaderItems = [
-    { href: "/home", title: "Home" },
-    { href: "/about", title: "About Me" },
-    { href: "/blog", title: "Blog" },
-    { href: "/contact", title: "Contact" }
-];
+import { topMenuList } from "pages/api/common";
 
 export default function Home({ }) {
 
     return (
         <>
-            <Header menuList={menuHeaderItems} />
+            <Header menuList={topMenuList} />
         </>
     )
 }

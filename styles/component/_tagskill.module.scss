@@ -1,0 +1,13 @@
+.tag-skill {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    &__label {
+        margin: 2px;
+        padding: 0 9px;
+        background-color: $bg-primary;
+        border-radius: 25px;
+    }
+}

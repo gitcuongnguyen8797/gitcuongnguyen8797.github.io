@@ -1,14 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-
-const menuList = [
-    { href: "/home", title: "Home" },
-    { href: "/about", title: "About Me" },
-    { href: "/blog", title: "Blog" },
-    { href: "/contact", title: "Contact" }
-]
+import { topMenuList } from "pages/api/common";
 
 export default function BannerSection() {
     return (
@@ -16,7 +9,7 @@ export default function BannerSection() {
             <div className="banner-section__content col-12 col-md-6">
                 <div className="banner-menu">
                     <ul className="menu">
-                        {menuList.map((value, index) => <li key={index} className="m-3"><Link href={value.href}><a className="txt--muted">{value.title}</a></Link></li>)}
+                        {topMenuList.map((value, index) => <li key={index} className="m-3"><Link href={value.href}><a className="txt--muted">{value.title}</a></Link></li>)}
                     </ul>
                 </div>
                 <div className="banner-content">

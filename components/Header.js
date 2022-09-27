@@ -15,9 +15,7 @@ const Banner1 = () => (
                 <h1>Ths. Cuong Nguyen</h1>
                 <p>Full-Stack Developer</p>
             </div>
-            <div className="banner-content__right">
-                {/* <Image src={require('../public/images/profile.jpg')} layout="responsive"/> */}
-            </div>
+            <div className="banner-content__right"></div>
         </div>
     </div>
 );
@@ -29,9 +27,7 @@ const Banner2 = () => (
                 <h1>DevOps</h1>
                 <p>Docker, Terraform, AWS, GCP</p>
             </div>
-            <div className="banner-content__right">
-                {/* <Image src={require('../public/images/profile.jpg')} layout="responsive"/> */}
-            </div>
+            <div className="banner-content__right"></div>
         </div>
     </div>
 );
@@ -43,9 +39,7 @@ const Banner3 = () => (
                 <h1>Information Security</h1>
                 <p>Penetration Testing</p>
             </div>
-            <div className="banner-content__right">
-                {/* <Image src={require('../public/images/profile.jpg')} layout="responsive"/> */}
-            </div>
+            <div className="banner-content__right"></div>
         </div>
     </div>
 );

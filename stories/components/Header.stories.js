@@ -14,8 +14,8 @@ const props = {
   menuList: [
     { href: "/home", title: "Home" },
     { href: "/about", title: "About Me" },
-    { href: "/Blog", title: "Blog" },
-    { href: "/Contact", title: "Contact" },
+    { href: "/blog", title: "Blog" },
+    { href: "/contact", title: "Contact" },
   ]
 }
 
