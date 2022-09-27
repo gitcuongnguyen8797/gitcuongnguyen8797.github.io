@@ -5,3 +5,13 @@
     font-size: clamp(0.75rem, 0.75rem + 1.5vh, 2rem);
     line-height: 24px;
 }
+
+.txt--white {
+    color: $text-white;
+}
+.txt--yellow {
+    color: $text-primary;
+}
+.txt--muted {
+    color: $text-muted;
+}
