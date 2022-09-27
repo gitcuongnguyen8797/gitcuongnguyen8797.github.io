@@ -4,3 +4,12 @@
 
     &__section2 {}
 }
+
+@media screen and (min-width: 875px) {
+    .sticky-menu {
+        position: sticky !important;
+        width: 95%;
+        top: 0;
+        left: 0;
+    }
+}

@@ -5,7 +5,7 @@ import React from "react";
 export default function InformationCard({ avatar, name, title, socials = [] }) {
     return (
         <div className="card-info">
-            <div className="card-info__avatar"><Image className="avatar-image--rounded" src={avatar} /></div>
+            <div className="card-info__avatar"><Image className="avatar-image--rounded" src={avatar} width="200px" height="200px" /></div>
             <div className="card-info__name ">{name}</div>
             <div className="card-info__title ">{title}</div>
             <div className="card-info__socials">
