@@ -1,14 +1,10 @@
 import React from "react";
-
+import TagSkill from "./TagSkill";
 
 const ExperienceItem = ({ projectName, description, teamSize, mainResponsibilities, techs = [] }) => (
     <div className="experience-item">
         <h5 className="experience-item__title">{projectName}</h5>
-        <div className="">
-            <ul className="tag-skill">
-                {techs.map((value, index) => <li key={index} className="tag-skill__label txt--white">{value}</li>)}
-            </ul>
-        </div>
+        <TagSkill skills={techs} />
         <div className="experience-item__content">
             <p>Description: {description} </p>
             <p>Team size: {teamSize}</p>
