@@ -5,21 +5,34 @@ import { topMenuList } from "pages/api/common";
 
 export default function BannerSection() {
     return (
-        <div className="banner-section">
-            <div className="banner-section__content col-12 col-md-6">
+        <div className="banner-section ">
+            <div className="banner-section__content col-12 col-md-8 col-xl-6">
                 <div className="banner-menu">
                     <ul className="menu">
                         {topMenuList.map((value, index) => <li key={index} className="m-3"><Link href={value.href}><a className="txt--muted">{value.title}</a></Link></li>)}
                     </ul>
                 </div>
-                <div className="banner-content">
-                    <h1>I&apos;m Cuong Nguyen</h1>
-                    <h1><span className="txt--yellow">Full-Stack </span>Developer</h1>
-                    <span className="txt--muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s</span>
+                <div className="banner-body">
+                    <div className="banner-body__content">
+                        <h1>I&apos;m Cuong Nguyen</h1>
+                        <h1><span className="txt--yellow">Full-Stack </span>Developer</h1>
+                        <p className="txt--muted">
+                            I have 4 years of experience in
+                            software development in
+                            companies with many languages
+                            such as: PHP Laravel, NodeJS,
+                            React JS,... I want to improve work
+                            knowledge and maximize my
+                            capabilities to bring quality
+                            products and the best performance
+                            in my work.
+                        </p>
+                    </div>
                 </div>
-                <div></div>
             </div>
-            <div className="banner-section__image col-12 col-md-6"> <Image src={require('../../public/images/myavatar.jpg')} alt="PHP Developer" /></div>
+            <div className="banner-section__image col-4 col-md-4 col-xl-6">
+                <Image src={require('../../public/images/banner-technologies.png')} alt="PHP Developer" />
+            </div>
         </div>
     )
 }
