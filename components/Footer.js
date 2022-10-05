@@ -11,7 +11,7 @@ const ListInfo = ({ items = [] }) => (
         {
             items.map((value, index) => (
                 <li key={index} className="info-item">
-                    <div className="info-item__icon"><Image src={value.icon} layout="responsive" /></div>
+                    <div className="info-item__icon"><Image src={value.icon} layout="responsive" alt="info-icon" /></div>
                     <div className="info-item__content">{value.item}</div>
                 </li>
             ))
@@ -37,7 +37,7 @@ export default function Footer() {
                 <div className="col-xs-12 col-sm-12 col-md-1"></div>
                 <div className="col-xs-12 col-sm-5 col-md-4">
                     {/* Logo and Information Section */}
-                    <div className="col-sm-8 col-md-7 pb-4"><Image src={Logo} layout="responsive" /></div>
+                    <div className="col-sm-8 col-md-7 pb-4"><Image src={Logo} layout="responsive" alt="Mr.CuongNguyen Developer" /></div>
                     <ListInfo items={footerUserInfo} />
                     <ul className="social-links" style={{ justifyContent: "flex-start" }}>
                         {
