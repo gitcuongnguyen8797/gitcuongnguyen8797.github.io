@@ -9,11 +9,9 @@ const About = ({title, description, keywords}) => {
     return (
         <div className="container-fluid-md container-xl">
             <Head>
-                <html lang="en" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="row">
