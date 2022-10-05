@@ -1,9 +1,7 @@
 .banner-section {
     display: flex;
-    justify-content: space-between;
-    padding: 0 5vw;
     background-color: $bg-white;
-    height: 60vh;
+    height: 50vh;
     background-image: url('../../public/images/banner-bg.png');
     background-position: left;
     background-repeat: no-repeat;
@@ -12,19 +10,24 @@
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-
-        .banner-menu {}
-
-        .banner-content {
-            margin-bottom: 20vh;
-        }
+        padding-left: 1.75vw;
     }
 
     &__image {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
+    }
+
+    .banner-body {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        padding-bottom: 15vh;
+
+        &__content {
+            padding: 0 1vw;
+        }
     }
 
 

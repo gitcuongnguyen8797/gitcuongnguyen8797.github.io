@@ -1,0 +1,40 @@
+.footer {
+    background-color: #E4E6EB;
+
+    &__copy-right {
+        justify-content: center;
+        padding: 5px;
+        background-color: $bg-white;
+    }
+}
+
+.list-info {
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 9px;
+
+        &__icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.list-menu {
+
+    &__item {
+        margin-bottom: 12px;
+        font-size: 20px;
+        
+        a {
+            color: $text-muted;
+
+            &:hover {
+                color: $text-primary;
+            }
+        }
+    }
+}
