@@ -1,7 +1,7 @@
 
 const experiences = [
     {
-        company: "rakumo Co., Ltd", workTimes: "Feburay 2021 - Present",
+        company: "rakumo Co., Ltd", workTimes: "November 2021 - Present",
         projects: [
             {
                 projectName: "KoteiCalendar Project",
@@ -11,7 +11,9 @@ const experiences = [
                     "Implement Architecture of Project using Laravel Framework version 8",
                     "Implement new features",
                     "Set up Docker environment for development and deployment",
-                    "Set up CI/CD on Github Actions and Google Cloud Platform"
+                    "Writing document for System Design, Database Design, Setup Document",
+                    "Set up CI/CD on Github Actions and Google Cloud Platform",
+                    "Write Unit Test and make sure coverage above 80%",
                 ],
                 techs: ["Laravel 8", "GCP", "AWS", "Terraform", "Docker"]
             },
@@ -22,7 +24,9 @@ const experiences = [
                 mainResponsibilities: [
                     "Maintenance APIs, UI using CakePHP version 3",
                     "Set up Docker environment for development and deployment",
-                    "Set up CI/CD on Github Actions and Google Cloud Platform"
+                    "Set up CI/CD on Github Actions and Google Cloud Platform",
+                    "Write Unit Test and make sure coverage above 80%",
+                    "Refactor source code"
                 ]
             },
             {
@@ -32,7 +36,8 @@ const experiences = [
                 mainResponsibilities: [
                     "Implement Architecture of Project using Java Spring Framework",
                     "Implement new features",
-                    "Set up Docker environment for development and deployment"
+                    "Set up Docker environment for development and deployment",
+                    "Writing document for System Design, Database Design, Setup Document"
                 ],
                 techs: ["Java", "Spring", "Jenkins", "AWS"]
             },
@@ -40,7 +45,7 @@ const experiences = [
         ]
     },
     {
-        company: "Golden Owl Consulting Company", workTimes: "February 2021 - February 2022",
+        company: "Golden Owl Consulting Company", workTimes: "February 2021 - November 2021",
         projects: [
             {
                 projectName: "IPoker Project",
