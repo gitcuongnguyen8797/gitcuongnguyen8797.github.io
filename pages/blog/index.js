@@ -33,9 +33,9 @@ export default function Blog({title, description, keywords}) {
 export async function getStaticProps() {
     return {
         props: {
-            title: 'Blog | Nguyen Hai Cuong',
-            description: 'This page is where I will share my stories',
-            keywords: 'Tech Blogs, Stories, Full-stack Developer, CV, Hiring'
+            title: "Blog | Nguyen Hai Cuong",
+            description: "This page is where I will share my stories",
+            keywords: "Tech Blogs, Stories, Full-stack Developer, CV, Hiring"
         }
     }
 }
