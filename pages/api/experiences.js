@@ -1,7 +1,7 @@
 
 const experiences = [
     {
-        company: "rakumo Co., Ltd", workTimes: "November 2021 - Present",
+        company: "rakumo Co., Ltd", workTimes: "November 2021 - January 2023",
         projects: [
             {
                 projectName: "KoteiCalendar Project",
