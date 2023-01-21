@@ -4,7 +4,7 @@ import Head from "next/head"
 const showComminSoon = () => (
     <div className="container text-center">
         <h1>Comming Soon ...</h1>
-        <h2>I have a lot stories that I'd like to tell you.</h2>
+        <h2>I have a lot stories that I&apos;d like to tell you.</h2>
     </div>
 )
 
