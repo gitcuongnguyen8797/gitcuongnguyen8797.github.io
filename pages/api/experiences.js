@@ -1,6 +1,45 @@
 
 const experiences = [
     {
+        company: "SupremeTech Co., Ltd", workTimes: "February 2023 - Present",
+        projects: [
+            {
+                projectName: "Talenten Project",
+                teamSize: 10,
+                description: "Talenten is a project to connect candidates and recruiters together. It provides resources for hiring and finding jobs.",
+                mainResponsibilities: [
+                    'Design Infrastructure has the ability to scale up.',
+                    "Build CI/CD process using Github Actions and GCP.",
+                    "Set up docker environment for deveploment.",
+                    "Ensuring the structure of the BE/FE source code is easy to maintain and scale up.",
+                    "Write Unit Tests to coverage above 80%"
+                ],
+                techs: ['NestJS', 'Terraform', 'GCP', 'Docker', 'NextJS']
+            },
+            {
+                projectName: "Starbucks JP project",
+                teamSize: 15,
+                description: "The project gives administrators the ability to manage Starbucks stores and products.",
+                mainResponsibilities: [
+                    "Maintenance and implement new features Backend project.",
+                    "Writing unit tests to coverage above 80%.",
+                    "Implement the synchronizing data system of Starbucks to Elasticsearch using AWS Lambda."
+                ],
+                techs: ['Laravel 8', 'AWS Lambda', 'NodeJS']
+            },
+            {
+                projectName: "Notabi Graphy",
+                teamSize: 14,
+                description: "Notabi Graphy is a social traveling network that users can upload and write blogs on.",
+                mainResponsibilities: [
+                    "Maintenance and implement new APIs",
+                    "Writing unit tests to coverage above 80%",
+                ],
+                techs: ['NestJS', 'AWS', 'NextJS']
+            }
+        ],
+    },
+    {
         company: "rakumo Co., Ltd", workTimes: "November 2021 - January 2023",
         projects: [
             {

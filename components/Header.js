@@ -12,7 +12,9 @@ const Banner1 = () => (
     <div className="header-banner">
         <div className="banner-content">
             <div className="banner-content__left">
-                <h1>Ths. Cuong Nguyen</h1>
+                <h1>Nguyen Hai Cuong (Camilo Nguyen)</h1>
+                <br/>
+                <h4>Cyber security master&apos;s degree</h4>
                 <p>Full-Stack Developer</p>
             </div>
             <div className="banner-content__right"></div>
