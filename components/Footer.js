@@ -58,7 +58,7 @@ export default function Footer() {
                     <ListMenu menuItems={categoriesPages} />
                 </div>
             </div>
-            <div className="footer__copy-right row"> 2022 All Rights Reserved. Made with &#10084; </div>
+            <div className="footer__copy-right row"> 2024 All Rights Reserved. Made with &#10084; </div>
         </footer>
     )
 }

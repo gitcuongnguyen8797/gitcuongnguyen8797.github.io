@@ -17,16 +17,10 @@ export default function BannerSection() {
                         <h1>I&apos;m Cuong Nguyen</h1>
                         <h1><span className="txt--yellow">Full-Stack </span>Developer</h1>
                         <p className="txt--muted">
-                            I have 4 years of experience in
-                            software development in
-                            companies with many languages
-                            such as: PHP Laravel, NodeJS,
-                            React JS,... I want to improve work
-                            knowledge and maximize my
-                            capabilities to bring quality
-                            products and the best performance
-                            in my work.
+                            As a software engineer with 5 years of experience in many languages such as PHP, Laravel, NodeJS, NestJS, React JS, etc., 
+                            I want to improve my work knowledge and maximize my capabilities to bring quality products and the best performance in my work.
                         </p>
+                        <p className="txt--muted">Finding new challenge, position so that I can bring my value and become a key members in your company</p>
                     </div>
                 </div>
             </div>

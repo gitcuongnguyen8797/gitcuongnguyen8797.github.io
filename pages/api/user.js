@@ -1,5 +1,5 @@
 const userInfo = {
-    avatar: require('../../public/images/profile.jpg'),
+    avatar: require('../../public/images/profile2.jpg'),
     name: "Nguyen Hai Cuong",
     title: "Full-Stack Developer",
     socials: [
@@ -21,11 +21,14 @@ const userInfo = {
         title: "Skills",
         listItems: [
             { label: "PHP", percent: 90 },
+            { label: "Nestjs", percent: 90},
             { label: "React", percent: 85 },
+            { label: "NextJS", percent: 85 },
+            { label: "GCP", percent: 85 },
             { label: "Redux", percent: 85 },
             { label: "Redux-Saga", percent: 85 },
             { label: "Java", percent: 70 },
-            { label: "Cloud", percent: 70 },
+            { label: "AWS", percent: 70 },
             { label: "CSS/SCSS", percent: 70 },
         ]
     }
