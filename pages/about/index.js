@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const About = ({title, description, keywords}) => {
     return (
-        <div className="container-fluid-md container-xl">
+        <div className="container-fluid-md container-xl g-0">
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
@@ -25,7 +25,7 @@ const About = ({title, description, keywords}) => {
                     <ExperienceSection />
                 </div>
             </div>
-            <div className="row pt-5"><Footer /></div>
+            <div className="pt-5"><Footer /></div>
         </div>
     )
 }

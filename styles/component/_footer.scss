@@ -2,6 +2,7 @@
     background-color: #E4E6EB;
 
     &__copy-right {
+        display: flex;
         justify-content: center;
         padding: 5px;
         background-color: $bg-white;

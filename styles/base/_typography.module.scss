@@ -15,3 +15,45 @@
 .txt--muted {
     color: $text-muted;
 }
+
+.txt--neo {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+    // animation: pulsate 0.6s ease-in-out infinite alternate; 
+}
+
+@keyframes pulsate {
+    
+    100% {
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa,
+            0 0 102px #0fa,
+            0 0 151px #0fa;
+    }
+    
+    0% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px #f09,
+        0 0 73px #f09,
+        0 0 80px #f09,
+        0 0 94px #f09,
+        0 0 140px #f09;
+  }
+}
