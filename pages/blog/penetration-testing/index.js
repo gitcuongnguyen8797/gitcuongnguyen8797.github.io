@@ -8,26 +8,26 @@ const PostTimeLine = ({ timeline: [] }) => (
   <div className="timeline">
     <ul>
       <li style={{ accentColor: "#41516C" }}>
-        <div class="date">Hiden yourself</div>
-        <div class="title">How to hide yourself on the Internet</div>
-        <div class="descr">
+        <div className="date">Hiden yourself</div>
+        <div className="title">How to hide yourself on the Internet</div>
+        <div className="descr">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque
           hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur
           laboriosam!
         </div>
       </li>
       <li>
-        <div class="date">2007</div>
-        <div class="title">Title 2</div>
-        <div class="descr">
+        <div className="date">2007</div>
+        <div className="title">Title 2</div>
+        <div className="descr">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
           adipisci nobis nostrum vero nihil veniam.
         </div>
       </li>
       <li>
-        <div class="date">2012</div>
-        <div class="title">Title 3</div>
-        <div class="descr">
+        <div className="date">2012</div>
+        <div className="title">Title 3</div>
+        <div className="descr">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima
           consequuntur soluta placeat iure totam commodi repellendus ea
           delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe
@@ -35,17 +35,17 @@ const PostTimeLine = ({ timeline: [] }) => (
         </div>
       </li>
       <li>
-        <div class="date">2017</div>
-        <div class="title">Title 4</div>
-        <div class="descr">
+        <div className="date">2017</div>
+        <div className="title">Title 4</div>
+        <div className="descr">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit,
           cumque.
         </div>
       </li>
       <li>
-        <div class="date">2022</div>
-        <div class="title">Title 5</div>
-        <div class="descr">
+        <div className="date">2022</div>
+        <div className="title">Title 5</div>
+        <div className="descr">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.
         </div>
       </li>
@@ -65,9 +65,7 @@ export default function Pentest({ title, description, keywords }) {
         <section className="header-section">
           <div className="banner-drawback">
             <Image
-              src={
-                "https://seotrends.com.vn/wp-content/uploads/2023/04/anh-hacker-anonymous-hoat-hinh-1-1024x683.jpeg"
-              }
+              src={require('./../../../public/images/banner-hacker.jpeg')}
               layout="fill"
               alt="background"
             />
