@@ -4,51 +4,21 @@ import Link from "next/link";
 import Head from "next/head";
 import { topMenuList } from "pages/api/common";
 
-const PostTimeLine = ({ timeline: [] }) => (
+
+
+const PostTimeLine = ({ timeline }) => (
   <div className="timeline">
     <ul>
-      <li style={{ accentColor: "#41516C" }}>
-        <div className="date">Hiden yourself</div>
-        <div className="title">How to hide yourself on the Internet</div>
-        <div className="descr">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque
-          hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur
-          laboriosam!
-        </div>
-      </li>
-      <li>
-        <div className="date">2007</div>
-        <div className="title">Title 2</div>
-        <div className="descr">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-          adipisci nobis nostrum vero nihil veniam.
-        </div>
-      </li>
-      <li>
-        <div className="date">2012</div>
-        <div className="title">Title 3</div>
-        <div className="descr">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima
-          consequuntur soluta placeat iure totam commodi repellendus ea
-          delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe
-          nulla hic.
-        </div>
-      </li>
-      <li>
-        <div className="date">2017</div>
-        <div className="title">Title 4</div>
-        <div className="descr">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit,
-          cumque.
-        </div>
-      </li>
-      <li>
-        <div className="date">2022</div>
-        <div className="title">Title 5</div>
-        <div className="descr">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.
-        </div>
-      </li>
+      { timeline.map(({section, title, description, slug = ''}, index) => (
+          <li key={index} style={{ accentColor: "#41516C" }}>
+            <div className="date">{section}</div>
+            <div className="title">{title}</div>
+            <div className="descr">
+              {description}
+              <Link href={slug} ><a className="ps-2 txt--yellow" href="#">Read more</a></Link>
+            </div>
+        </li>
+      ))}
     </ul>
   </div>
 );
@@ -72,8 +42,8 @@ export default function Pentest({ title, description, keywords }) {
           </div>
 
           <div className="header-container">
-            <div className="header-nav">
-              <div className="">
+            <div className="header-nav d-flex justify-content-center justify-content-md-between">
+              <div className="d-none d-md-flex ms-3">
                 <Image
                   src={require("./../../../public/images/blackhat.webp")}
                   layout="fixed"
@@ -82,7 +52,7 @@ export default function Pentest({ title, description, keywords }) {
                   height="100%"
                 />
               </div>
-              <div className="banner-menu">
+              <div className="banner-menu me-3">
                 <ul className="menu">
                   {topMenuList.map((value, index) => (
                     <li key={index} className="m-3">
@@ -113,8 +83,38 @@ export default function Pentest({ title, description, keywords }) {
           {/* Secton Blog Timeline*/}
           <br />
           <h1 className="text-center">Journey Timeline</h1>
+          <br/>
           <div>
-            <PostTimeLine timeline={[]} />
+            <PostTimeLine timeline={[
+              {
+                section: 'Hiden yourself',
+                title: 'How to hide yourself on the Internet ?',
+                description: `When people join the Internet, all their activities will be logged at the point you visited, such as ISP, Web Server, DNS Server, etc. 
+                So how can we protect ourselves to the Internet?`,
+                slug: '/blog/penetration-testing/hide-yourself'
+              },
+              {
+                section: 'Reconnaissance',
+                title: 'Researching everything what you can',
+                description: `"To know oneself is true progress." Collect data about your targets. Which benefits does it have`,
+                slug: '/blog/penetration-testing/reconnaissance'
+              },
+              {
+                section: 'Scanning',
+                title: 'Researching everything what you can',
+                description: 'This is a section talk about how can we be determined'
+              },
+              {
+                section: 'Vulnerability Assessment',
+                title: 'Researching everything what you can',
+                description: 'This is a section talk about how can we be determined'
+              },
+              {
+                section: 'DDoS if can not hack anything',
+                title: 'Just kidding',
+                description: 'If you feel uncomfortable with an organization or individual but are not able to hack them, DDoS !!!.'
+              },
+            ]} />
           </div>
         </section>
         <section className="footer-section">
