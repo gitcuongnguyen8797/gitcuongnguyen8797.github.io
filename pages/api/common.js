@@ -13,8 +13,8 @@ export const topMenuList =  [
 export const categoriesPages = [
     { href: "/hot-news", title: "Hot News" },
     { href: "/iot", title: "IoT" },
-    { href: "/machine-learning", title: "Machine Learning" },
-    { href: "/penetration-testing", title: "Penetration Testing" }
+    { href: "/blog/machine-learning", title: "Machine Learning" },
+    { href: "/blog/penetration-testing", title: "Penetration Testing" }
 ]
 
 export const footerUserInfo = [

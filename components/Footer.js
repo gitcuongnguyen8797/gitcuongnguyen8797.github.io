@@ -32,8 +32,8 @@ const ListMenu = ({ menuItems = [] }) => (
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            <div className="footer__body row pb-5 pt-5">
+        <footer className="footer g-0">
+            <div className="footer__body row p-3 pb-5 pt-5 g-0 ">
                 <div className="col-xs-12 col-sm-12 col-md-1"></div>
                 <div className="col-xs-12 col-sm-5 col-md-4">
                     {/* Logo and Information Section */}
@@ -58,7 +58,7 @@ export default function Footer() {
                     <ListMenu menuItems={categoriesPages} />
                 </div>
             </div>
-            <div className="footer__copy-right row"> 2024 All Rights Reserved. Made with &#10084; </div>
+            <div className="footer__copy-right"> 2024 All Rights Reserved. Made with &#10084; </div>
         </footer>
     )
 }
