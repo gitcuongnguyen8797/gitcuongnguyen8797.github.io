@@ -109,11 +109,6 @@ export default function Pentest({ title, description, keywords }) {
                 title: 'Researching everything what you can',
                 description: 'This is a section talk about how can we be determined'
               },
-              {
-                section: 'DDoS if can not hack anything',
-                title: 'Just kidding',
-                description: 'If you feel uncomfortable with an organization or individual but are not able to hack them, DDoS !!!.'
-              },
             ]} />
           </div>
         </section>
