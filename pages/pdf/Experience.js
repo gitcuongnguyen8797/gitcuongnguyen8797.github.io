@@ -1,6 +1,6 @@
 import { View, Text } from "@react-pdf/renderer";
 import Project from "./Project";
-import styles from "./styles";
+import styles from "../../styles/pdf/experiences.styles";
 
 export default function Experience({ company, workTimes, projects = []}) {
   return (

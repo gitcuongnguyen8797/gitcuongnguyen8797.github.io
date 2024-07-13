@@ -1,5 +1,5 @@
 import { Text, } from '@react-pdf/renderer';
-import ExperienceProgress from '../ProgressBar';
+import ExperienceProgress from './ProgressBar';
 
 export default function Languages() {
   return (

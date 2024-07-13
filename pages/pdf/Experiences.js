@@ -2,7 +2,7 @@ import { View, Text } from "@react-pdf/renderer";
 import Project from "./Project";
 import Experience from "./Experience";
 import experiences from "pages/api/experiences";
-import Divider from "../Divider";
+import Divider from "./Divider";
 
 
 export default function Experiences() {

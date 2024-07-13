@@ -6,7 +6,6 @@ module.exports = {
   images: {
     unoptimized: true
   },
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'index.js'],
   eslint: {
     ignoreDuringBuilds: true,
   },

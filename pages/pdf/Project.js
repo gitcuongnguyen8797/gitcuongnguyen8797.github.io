@@ -1,6 +1,6 @@
 import { Text, View } from "@react-pdf/renderer";
-import TagSkill from "../TagSkill";
-import styles from "./styles";
+import TagSkill from "./TagSkill";
+import styles from "../../styles/pdf/experiences.styles";
 
 export default function Project({ projectName, workingTime, teamSize, role, description, mainResponsibilities = [], techs = [],  }) {
   return(

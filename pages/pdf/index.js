@@ -1,19 +1,12 @@
 "use client";
 import dynamic from "next/dynamic";
 import {
-  pdf,
   Document,
   Page,
   View,
-  Text,
-  Image,
-  Svg,
-  Line,
-  G,
-  Polygon,
 } from "@react-pdf/renderer";
 import { useEffect, useState } from "react";
-import {  main } from "./styles";
+import {  main } from "../../styles/pdf/styles";
 import GenernalInformation from './GeneralInformation'
 import Skills from "./Skills";
 import Contacts from "./Contacts";
@@ -22,14 +15,6 @@ import Introduction from "./Introduction";
 import Languages from "./Languages";
 import Experiences from "./Experiences";
 import Certs from "./Certs";
-
-const PDFDownloadLink = dynamic(
-  () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
-  {
-    ssr: false,
-    loading: () => <p>Loading...</p>,
-  }
-);
 
 const PDFViewer = dynamic(
   () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),

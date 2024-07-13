@@ -1,5 +1,5 @@
 import { Text } from "@react-pdf/renderer";
-import ProgressBar from "../ProgressBar";
+import ProgressBar from "./ProgressBar";
 import userInfo from "pages/api/user";
 
 export default function Skills() {
