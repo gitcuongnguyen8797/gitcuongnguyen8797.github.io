@@ -1,7 +1,7 @@
 
 const experiences = [
     {
-        company: "SupremeTech Co., Ltd", workTimes: "February 2023 - Present",
+        company: "SupremeTech Co., Ltd", workTimes: "February 2023 - August 2024",
         projects: [
             {
                 projectName: "Supremetech Hub",
