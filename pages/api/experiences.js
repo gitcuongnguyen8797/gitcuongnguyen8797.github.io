@@ -1,6 +1,50 @@
 
 const experiences = [
     {
+        company: "Freelancer", workTimes: "August 2024 - Present",
+        projects: [
+            {
+                projectName: "Japanese Customer",
+                teamSize: 4,
+                role: 'Senior Developer',
+                workingTime: 'Aug 2024 - Present',
+                description: "The project about Device and Notification Management writing in ReactJS and Firebase Cloud Function",
+                mainResponsibilities: [
+                    "Define structure, solutions to optimize cost and performance for a large of amount notifications should be pushed.",
+                    "Write Documents such as Basic Design, Detail Design, Guideline Development and Deploy.",
+                ],
+                techs: ['Nodejs', 'ReactJS', 'Fireabse', "GCP"]
+            }, 
+            {
+                projectName: "Japanese Customer",
+                teamSize: 6,
+                role: 'Team Lead',
+                workingTime: 'Aug 2024 - Present',
+                description: "The project is an Desktop App on Windows that provide ability for Doctors can manage patient profiles and control directly Eye Test Equipment on the app.",
+                mainResponsibilities: [
+                    "Build structure project",
+                    "Review code other members",
+                    "Task Management",
+                    "Research and Integrate new technologies",
+                    "Write Documents such as Basic Design, Detail Design, Guideline Development and Deploy\n\n\n\n\n",
+                ],
+                techs: ['C#', 'WPF', 'C++', 'OpenCV']
+            },
+            {
+                projectName: "Japanese Customer",
+                teamSize: 4,
+                role: 'Senior Developer',
+                workingTime: 'Aug 2024 - Oct 2024',
+                description: "The project is a ERP of Payment System",
+                mainResponsibilities: [
+                    "Coding new features and maintains based on Detail Design",
+                    "Write Unit Tests to coverage 100% and test cases in TDD"
+                ],
+                techs: ['PHP', 'JQuery', 'Docker']
+            }, 
+        ]
+    },
+    {
         company: "SupremeTech Co., Ltd", workTimes: "February 2023 - August 2024",
         projects: [
             {
@@ -25,7 +69,7 @@ const experiences = [
                 workingTime: 'Feb 2023 - Aug 2024',
                 description: "The project gives administrators the ability to manage Starbucks stores and products.",
                 mainResponsibilities: [
-                    "Maintenance and implement new features Backend project.",
+                    "Maintenance and implement new features about Payment, Promotion, Cart",
                     "Writing unit tests to coverage above 80%.",
                     "Implement the synchronizing data system of Starbucks to Elasticsearch using AWS Lambda."
                 ],
@@ -53,7 +97,7 @@ const experiences = [
                 role: 'BE Developer',
                 description: "Notabi Graphy is a social traveling network that users can upload and write blogs on.",
                 mainResponsibilities: [
-                    "Maintenance and implement new APIs",
+                    "Maintenance and implement new APIs such as Collection Managment, Favorite Albums, Related Locations and Search Nearly Locations",
                     "Writing unit tests to coverage above 80%",
                 ],
                 techs: ['NestJS', 'AWS', 'NextJS']
@@ -68,10 +112,11 @@ const experiences = [
                 workingTime: 'November 2021 - January 2023',
                 role: 'Senior Fullstack Developer',
                 teamSize: 4,
-                description: `Kotei is a project for synchronizing data from master data system which uses cron job in Laravel and Google APIs. It make sure all of Calendar's events have been added into Calendar to workers can see tasks of theirs in that day.`,
+                description: `Kotei is a project for synchronizing data from a master data system that uses cron jobs in Laravel and Google APIs. The master data system is Mobile Application for Workers 
+                 It make sure all of Calendar's events have been added into Calendar to workers can see tasks of theirs in that day.`,
                 mainResponsibilities: [
                     "Implement Architecture of Project using Laravel Framework version 8",
-                    "Implement new features",
+                    "Implement modules to synchronize data from masterdata",
                     "Set up Docker environment for development and deployment",
                     "Writing document for System Design, Database Design, Setup Document",
                     "Set up CI/CD on Github Actions and Google Cloud Platform",

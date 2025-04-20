@@ -42,6 +42,23 @@ const userInfo = {
         introduction: `As a software engineer with 5 years of experience in many languages such as PHP, Laravel, NodeJS, NestJS, React JS, etc., 
         I want to improve my work knowledge and maximize my capabilities to bring quality products and the best performance in my work.`
     },
+    educations: {
+        title: "Education",
+        educations: [
+            {
+                title: "Master's degree",
+                time: "2021 - 2023",
+                university: "Academy Of CryptographyTechniques",
+                major: "Information Security"
+            },
+            {
+                title: "Engineer's degree",
+                time: "2015 - 2020",
+                university: "Academy Of Cryptography Techniques",
+                major: "Information Security"
+            }
+        ]
+    },
     certification: {
         title: "Certifications",
         certs: [

@@ -2,15 +2,15 @@ import {StyleSheet} from '@react-pdf/renderer';
 export default StyleSheet.create({
     container: {
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
     },
     companyContainer: {
-        width: '31%',
-        textAlign: 'left'
+        width: '100%',
+        textAlign: 'left',
+        paddingBottom: 15
     },
     projectsContainer: {
-        width: '69%',
-        paddingLeft: 25,
+        width: '100%',
         textAlign: 'left'
     },
     tagSkillsContainer: {
@@ -24,6 +24,7 @@ export default StyleSheet.create({
     projectContent: {
         fontSize: 11,
         color: '#767676',
-        paddingBottom: 5
+        paddingBottom: 5,
+        fontWeight: 'bold'
     }
 })

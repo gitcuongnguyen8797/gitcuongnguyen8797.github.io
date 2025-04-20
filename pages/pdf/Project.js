@@ -13,7 +13,7 @@ export default function Project({ projectName, workingTime, teamSize, role, desc
         }
       </View>
       <View style={{ marginTop: 10}}>
-        {/* <Text style={styles.projectContent}>Description: {description}</Text> */}
+        <Text style={styles.projectContent}>Description: {description}</Text>
         <Text style={styles.projectContent}>Team Size: {teamSize}</Text>
         <Text style={styles.projectContent}>Position: <Text style={{ fontWeight: 'bold' }}>{role}</Text></Text>
         <Text style={styles.projectContent}>Responsibilities: </Text>

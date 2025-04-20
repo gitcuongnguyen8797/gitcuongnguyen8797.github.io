@@ -19,5 +19,9 @@ export default StyleSheet.create({
     },
     email: {
         fontSize: 9,
+    },
+
+    education_container: {
+        marginTop: 10
     }
 });

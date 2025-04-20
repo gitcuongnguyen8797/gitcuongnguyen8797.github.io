@@ -15,6 +15,7 @@ import Introduction from "./Introduction";
 import Languages from "./Languages";
 import Experiences from "./Experiences";
 import Certs from "./Certs";
+import Education from "./Education";
 
 const PDFViewer = dynamic(
   () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),
@@ -57,17 +58,21 @@ const PortfolioPdf = () => {
             <Divider />
             <Contacts />
 
+            <Divider />
+            <Education />
+
+            {/* Divider */}
+            <Divider />
+            <Skills />
+            
             {/* Divider */}
             <Divider />
             <Languages />
 
             {/* Divider */}
-            <Divider />
-            <Skills />
-
-            {/* Divider */}
-            <Divider />
-            <Certs />
+            {/* <Divider />
+            <Certs /> */}
+            
           </View>
           <View style={main.rightContainer}>
             {/* Introduction Banner */}
