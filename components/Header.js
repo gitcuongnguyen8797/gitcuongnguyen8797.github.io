@@ -3,6 +3,7 @@ import Image from "next/image";
 import Logo from "public/logo.svg";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ChatBox from "./ChatBox";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,19 +11,19 @@ import "swiper/css/pagination";
 
 const Banner1 = () => (
   <div className="header-banner">
-    <div className="banner-content">
+    <div className="banner-content" >
       <div className="banner-content__left">
         <h1>Nguyen Hai Cuong (Camilo Nguyen)</h1>
         <br />
         <h4>Cyber security master&apos;s degree</h4>
         <p>Full-Stack Developer</p>
       </div>
-      <div className="banner-content__right"></div>
+      <div className="banner-content__right" style={{ marginLeft: -150}}>
+        <ChatBox />
+      </div>
     </div>
   </div>
-);
-
-const Banner2 = () => (
+);const Banner2 = () => (
   <div className="header-banner">
     <div className="banner-content">
       <div className="banner-content__left">

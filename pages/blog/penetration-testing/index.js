@@ -44,13 +44,14 @@ export default function Pentest({ title, description, keywords }) {
           <div className="header-container">
             <div className="header-nav d-flex justify-content-center justify-content-md-between">
               <div className="d-none d-md-flex ms-3">
-                <Image
-                  src={require("./../../../public/images/blackhat.webp")}
-                  layout="fixed"
-                  alt="Blackhat has cap"
-                  width="100%"
-                  height="100%"
-                />
+                <Link href="/" className="txt--white txt--neo fs-4">
+                  <Image
+                    src={require("./../../../public/images/blackhat.webp")}
+                    layout="fixed"
+                    alt="Blackhat has cap"
+                    width={100}                  
+                  />
+                </Link>
               </div>
               <div className="banner-menu me-3">
                 <ul className="menu">
