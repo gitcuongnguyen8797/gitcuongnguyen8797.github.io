@@ -1,7 +1,7 @@
 import { View, Text } from "@react-pdf/renderer";
 import Project from "./Project";
 import Experience from "./Experience";
-import experiences from "pages/api/experiences";
+import experiences from "data/experiences";
 import Divider from "./Divider";
 
 

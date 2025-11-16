@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import { topMenuList } from "pages/api/common";
+import Header from "components/Header";
+import { topMenuList } from "data/common";
 import Head from "next/head";
 
 export default function Home({title, description, keywords}) {

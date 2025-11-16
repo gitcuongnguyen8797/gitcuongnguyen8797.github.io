@@ -1,4 +1,4 @@
-import userInfo from 'pages/api/user';
+import userInfo from 'data/user';
 import React from 'react';
 import InformationCard from './InformationCard';
 import ListProgress from './ListProgress';

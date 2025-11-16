@@ -1,5 +1,5 @@
-import React from "react";
-import experiences from "pages/api/experiences";
+import React from 'react';
+import experiences from "data/experiences";
 import ExperiencesTable from "@/components/ExperiencesTable";
 
 export default function ExperienceSection() {

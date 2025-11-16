@@ -1,5 +1,6 @@
 import { View, Image, Text } from "@react-pdf/renderer";
-import userInfo from "pages/api/user";
+import React from "react";
+import userInfo from "data/user";
 import styles from "../../styles/pdf/introduction.styles";
 
 export default function Introduction() {

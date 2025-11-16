@@ -2,33 +2,11 @@
 
 module.exports = {
   reactStrictMode: true,
-  swcMinify: false,
+  output: 'export',
   images: {
     unoptimized: true
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/home',
-        permanent: true,
-      },
-    ]
-  },
-  async headers() {
-    return [
-      {
-        source: "/about",
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, must-revalidate',
-          }
-        ],
-      }
-    ]
   }
 };

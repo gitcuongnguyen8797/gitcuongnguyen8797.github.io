@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { topMenuList } from "pages/api/common";
+import { topMenuList } from "data/common";
 
 export default function BannerSection() {
     return (
@@ -9,7 +9,7 @@ export default function BannerSection() {
             <div className="banner-section__content col-12 col-md-8 col-xl-6">
                 <div className="banner-menu">
                     <ul className="menu">
-                        {topMenuList.map((value, index) => <li key={index} className="m-3"><Link href={value.href}><a className="txt--muted">{value.title}</a></Link></li>)}
+                        {topMenuList.map((value, index) => <li key={index} className="m-3"><Link href={value.href} className="txt--muted">{value.title}</Link></li>)}
                     </ul>
                 </div>
                 <div className="banner-body">
@@ -25,7 +25,7 @@ export default function BannerSection() {
                 </div>
             </div>
             <div className="banner-section__image col-4 col-md-4 col-xl-6">
-                <Image src={require('../../public/images/banner-technologies.png')} alt="PHP Developer" />
+                <Image src={require('../../public/images/banner-technologies.png')} alt="PHP Developer" width={400} />
             </div>
         </div>
     )

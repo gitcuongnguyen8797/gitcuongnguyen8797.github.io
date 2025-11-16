@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import userInfo from "pages/api/user";
+import userInfo from "data/user";
 import Logo from 'public/logo.svg';
-import { categoriesPages, footerUserInfo, topMenuList } from "pages/api/common";
+import { categoriesPages, footerUserInfo, topMenuList } from "data/common";
 
 
 const ListInfo = ({ items = [] }) => (
@@ -24,7 +24,7 @@ const ListMenu = ({ menuItems = [] }) => (
     <ul className="list-menu">
         {
             menuItems.map((value, index) =>
-                <li key={index} className="list-menu__item" ><Link href={value.href}><a>{value.title}</a></Link></li>
+                <li key={index} className="list-menu__item" ><Link href={value.href}>{value.title}</Link></li>
             )
         }
     </ul>
@@ -41,7 +41,7 @@ export default function Footer() {
                     <ListInfo items={footerUserInfo} />
                     <ul className="social-links" style={{ justifyContent: "flex-start" }}>
                         {
-                            userInfo.socials.map((value, index) => (<li key={index} className="social-links__item" style={{ margin: 0, marginRight: 15 }}><Link href={value.href}><a><Image src={value.icon} alt="developer" /></a></Link> </li>))
+                            userInfo.socials.map((value, index) => (<li key={index} className="social-links__item" style={{ margin: 0, marginRight: 15 }}><Link href={value.href}><Image src={value.icon} alt="developer" /></Link> </li>))
                         }
                     </ul>
                 </div>

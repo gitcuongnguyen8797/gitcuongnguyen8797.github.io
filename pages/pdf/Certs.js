@@ -1,5 +1,6 @@
 import { Text } from "@react-pdf/renderer";
-import userInfo from "pages/api/user";
+import React from "react";
+import userInfo from "data/user";
 
 export default function Certs() {
   return (

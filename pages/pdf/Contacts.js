@@ -1,6 +1,6 @@
 import { Path, Svg, Text, View } from "@react-pdf/renderer";
 import style from "../../styles/pdf/certs.styles";
-import userInfo from "pages/api/user";
+import userInfo from "data/user";
 
 export default function Contacts() {
   return (

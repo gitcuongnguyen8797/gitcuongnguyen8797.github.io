@@ -29,7 +29,7 @@ const Banner2 = () => (
         <h1>Penetration Testing</h1>
         <br/>
         {/* <h4>Penetration Testing Tutorial</h4> */}
-        <h5><Link href='/blog/penetration-testing'><a className="txt--yellow">Explore More &gt;</a></Link></h5>
+        <h5><Link href='/blog/penetration-testing' className="txt--yellow">Explore More &gt;</Link></h5>
       </div>
       <div className="banner-content__right"></div>
     </div>
@@ -42,7 +42,7 @@ const Banner3 = () => (
       <div className="banner-content__left">
         <h1>Machine Learning</h1>
         <br/>
-        <h5><Link href='/blog/machine-learning'><a className="txt--yellow">Explore More &gt;</a></Link></h5>
+        <h5><Link href='/blog/machine-learning' className="txt--yellow">Explore More &gt;</Link></h5>
       </div>
       <div className="banner-content__right"></div>
     </div>
@@ -55,7 +55,7 @@ const Banner4 = () => (
       <div className="banner-content__left">
         <h1>Internet of Things</h1>
         <br/>
-        <h5><Link href='/blog/iot'><a className="txt--yellow">Explore More &gt;</a></Link></h5>
+        <h5><Link href='/blog/iot' className="txt--yellow">Explore More &gt;</Link></h5>
       </div>
       <div className="banner-content__right"></div>
     </div>
@@ -73,8 +73,8 @@ export default function Header({ menuList = [] }) {
           <ul className="menu">
             {menuList.map((value, index) => (
               <li key={index} className="menu__item ">
-                <Link href={value.href}>
-                  <a className="txt--white">{value.title}</a>
+                <Link href={value.href} className="txt--white">
+                  {value.title}
                 </Link>
               </li>
             ))}

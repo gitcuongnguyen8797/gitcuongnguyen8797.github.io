@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-import { topMenuList } from "pages/api/common";
+import { topMenuList } from "data/common";
 
 
 
@@ -15,7 +15,7 @@ const PostTimeLine = ({ timeline }) => (
             <div className="title">{title}</div>
             <div className="descr">
               {description}
-              <Link href={slug} ><a className="ps-2 txt--yellow" href="#">Read more</a></Link>
+              <Link href={slug} className="ps-2 txt--yellow" >Read more</Link>
             </div>
         </li>
       ))}
@@ -56,8 +56,8 @@ export default function Pentest({ title, description, keywords }) {
                 <ul className="menu">
                   {topMenuList.map((value, index) => (
                     <li key={index} className="m-3">
-                      <Link href={value.href}>
-                        <a className="txt--white">{value.title}</a>
+                      <Link href={value.href} className="txt--white">
+                        {value.title}
                       </Link>
                     </li>
                   ))}

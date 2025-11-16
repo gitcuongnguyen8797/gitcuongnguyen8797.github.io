@@ -3,7 +3,7 @@ import {
   Text,
   Image,
 } from "@react-pdf/renderer";
-import userInfo from "pages/api/user";
+import userInfo from "data/user";
 import styles from "../../styles/pdf/general-information.styles";
 
 export default function () {
