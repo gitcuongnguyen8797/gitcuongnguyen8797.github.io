@@ -1,5 +1,5 @@
 const userInfo = {
-    avatar: require('../public/images/profile2.jpg'),
+    avatar: require('../public/images/avatar.jpeg'),
     name: "Nguyen Hai Cuong",
     phone: "0366.189.687 - 0925.521.115",
     email: 'cuongnguyen.work8797@gmail.com',
@@ -24,16 +24,14 @@ const userInfo = {
         title: "Skills",
         listItems: [
             { label: "PHP", percent: 90 },
-            { label: "Laravel", percent: 90 },
-            { label: "NodeJS", percent: 90 },
             { label: "NestJS", percent: 90},
-            { label: "React", percent: 85 },
             { label: "NextJS", percent: 85 },
+            { label: "C#", percent: 85 },
+            { label: "DevOps", percent: 85 },
             { label: "GCP", percent: 85 },
             { label: "AWS", percent: 85 },
-            { label: "Redux", percent: 75 },
             { label: "CSS/SCSS", percent: 75 },
-            { label: "Java", percent: 70 },
+            // { label: "Java", percent: 70 },
         ]
     },
     description: {
@@ -60,6 +58,31 @@ const userInfo = {
                 score: '',
                 link: '',
             }
+        ]
+    },
+
+    education: {
+        title: "Educations",
+        educations: [
+             {
+                degree: "Master of Information Security",
+                institution: "Acadamy of Cryptography Techniques",
+                location: "TP HCM, Vietnam",
+                period: "2020 - 2022",
+                gpa: "8.5/10.0",
+                description: "Specialized in Mathematics and Computer Science. Active member of the programming club.",
+                logo: "/icons/logo_actvn.jpeg" // You can replace with actual institution logo
+            },
+            {
+                degree: "Bachelor of Information Security",
+                institution: "Acadamy of Cryptography Techniques",
+                location: "TP HCM, Vietnam",
+                period: "2015 - 2020",
+                gpa: "3.6/4.0",
+                description: "Focused on Software Engineering, Data Structures, Algorithms, and Web Development. Completed capstone project on Full-Stack E-commerce Platform.",
+                logo: "/icons/logo_actvn.jpeg" // You can replace with actual institution logo
+            },
+           
         ]
     }
 }

@@ -12,11 +12,13 @@ export default function () {
       <Image
         style={{
           borderRadius: '10%',
-          height: "25vw",
-          width: "25vw",
+          height: '28vw',
+          width: '28vw',
           marginTop: 10,
+          aspectRatio: '1/1',
+          objectFit: 'cover',
         }}
-        src={'/static/profile2.jpg'}
+        src={'/static/avatar.jpeg'}
       />
       <Text style={styles.name}>{userInfo.name}</Text>
       <Text style={styles.position}>{userInfo.title}</Text>

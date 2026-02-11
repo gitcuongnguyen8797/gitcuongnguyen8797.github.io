@@ -2,6 +2,7 @@ import userInfo from 'data/user';
 import React from 'react';
 import InformationCard from './InformationCard';
 import ListProgress from './ListProgress';
+import EducationList from './EducationList';
 
 
 const LeftMenu = () => (
@@ -16,8 +17,11 @@ const LeftMenu = () => (
         {/* Skills */}
         <div className='left-menu__section2'><ListProgress {...userInfo.skills} /></div><hr />
 
+        {/* Education */}
+        <div className='left-menu__section4'><EducationList {...userInfo.education} /></div><hr />
+
         {/* Downloads */}
-        <div className='left-menu__section6'> </div>
+        <div className='left-menu__section6'></div>
     </div>
 );
 

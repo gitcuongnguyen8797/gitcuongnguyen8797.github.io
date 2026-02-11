@@ -1,0 +1,149 @@
+@import '../abstracts/variables.module';
+
+.education-list {
+    padding: 0;
+    
+    &__title {
+        margin-bottom: 2.5vh;
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2B2B2B;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+}
+
+.education-item {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    border-left: 4px solid $bg-primary;
+    position: relative;
+    align-items: flex-start;
+
+    &__logo-container {
+        flex-shrink: 0;
+        position: relative;
+        margin-left: -10px;
+    }
+
+    &__logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        background: transparent;
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        &--default {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+            
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__degree {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2B2B2B;
+        line-height: 1.5;
+        margin-bottom: 1vh;
+    }
+
+    &__period {
+        font-size: 13px;
+        color: $text-muted;
+        font-weight: 400;
+        margin-bottom: 1.5vh;
+        display: block;
+    }
+
+    &__institution {
+        font-size: 15px;
+        color: #1890FF;
+        font-weight: 500;
+        margin-bottom: 0.75vh;
+        line-height: 1.4;
+    }
+
+    &__location {
+        font-size: 13px;
+        color: $text-muted;
+        margin-bottom: 1vh;
+        display: flex;
+        align-items: center;
+        
+        &:before {
+            content: "📍";
+            margin-right: 6px;
+            font-size: 12px;
+        }
+    }
+
+    &__gpa {
+        font-size: 14px;
+        color: #52C41A;
+        font-weight: 600;
+        margin-bottom: 1.5vh;
+        display: block;
+    }
+
+    &__description {
+        font-size: 14px;
+        color: $text-muted;
+        line-height: 1.6;
+        margin-top: 1vh;
+    }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+    .education-item {
+        padding-left: 15px;
+        border-left-width: 3px;
+        gap: 15px;
+        
+        &__logo-container {
+            margin-left: -8px;
+        }
+
+        &__logo {
+            width: 40px;
+            height: 40px;
+        }
+        
+        &__degree {
+            font-size: 15px;
+        }
+        
+        &__institution {
+            font-size: 14px;
+        }
+    }
+}

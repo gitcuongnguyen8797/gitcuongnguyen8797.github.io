@@ -1,6 +1,38 @@
 
 const experiences = [
     {
+        company: "DiproTech Co., Ltd", workTimes: "August 2024 - Present",
+        projects: [
+           {
+                projectName: "Medical Device Software – C# / WPF Project",
+                teamSize: 8,
+                role: 'Team Leader',
+                workingTime: 'Aug 2024 - Present',
+                description: "Developed a desktop application to control and monitor a medical eye examination machine, enabling real-time image acquisition, device operation, and examination workflow management for clinical use.",
+                mainResponsibilities: [
+                    'RnD computer vision to apply Eye image proccessing.',
+                    'Manage task assignments and ensure timely project delivery.',
+                    'Implement new features based on client requirements.',
+                    'Review code of team members.'
+                ],
+                techs: ['C#', 'WPF', 'Sqlite3', 'AvaloniaUI'] 
+           },
+           {
+                projectName: "E-Learning Course Platform Project",
+                teamSize: 6,
+                role: 'Fullstack Developer',
+                workingTime: 'Aug 2024 - Present',
+                description: "Maintenance and development of an e-learning course platform. The platform allows users to access a variety of online courses, track their progress, and engage with interactive learning materials.",
+                mainResponsibilities: [
+                    'Optimize API performance and refactoring.',
+                    'Implement new features based on client requirements.',
+                    'Manage server deployment and maintenance.',
+                ],
+                techs: ['PHP', 'CodeIgniter 3', 'MySQL', 'React Native'] 
+           }
+        ]
+    },
+    {
         company: "SupremeTech Co., Ltd", workTimes: "February 2023 - August 2024",
         projects: [
             {

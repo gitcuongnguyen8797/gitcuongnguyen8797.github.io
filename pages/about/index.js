@@ -16,7 +16,7 @@ const About = ({title, description, keywords}) => {
 
             <div className="row">
                 {/* Left Menu */}
-                <div className="col-sm-12 col-md-4 col-lg-3 position-relative"><div className="card card-body sticky-menu"><LeftMenu /></div> </div>
+                <div className="col-sm-12 col-md-4 col-lg-3 position-relative"><div className="card card-body"><LeftMenu /></div> </div>
 
                 {/* Right Container */}
                 <div className="col-sm-12 col-md-8 col-lg-9">

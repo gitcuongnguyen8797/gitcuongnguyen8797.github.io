@@ -7,7 +7,7 @@ export default function InformationCard({ avatar, name, title, socials = [] }) {
     return (
         <div className="card-info">
             <div className="card-info__avatar">
-                <Image className="avatar-image--rounded" src={avatar} width={200} height={200}  alt="Full-Stack Developer" />
+                <Image className="avatar-image--rounded" src={avatar} width={200} height={200} style={{ width: '100%', height: 'auto', borderRadius: '50%', aspectRatio: '1/1', objectFit: 'cover' }} alt="Full-Stack Developer" />
                 <button className="btn icon-download" onClick={() => window.location.href = "/pdf"}><Image alt="Download CV" src={DownloadIcon} height={30} width={30} /></button>
             </div>
             <div className="card-info__name ">{name} </div>

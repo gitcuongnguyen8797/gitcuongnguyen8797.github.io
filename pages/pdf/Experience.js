@@ -4,7 +4,7 @@ import styles from "../../styles/pdf/experiences.styles";
 
 export default function Experience({ company, workTimes, projects = []}) {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} wrap={true}>
       <View style={styles.companyContainer}>
         <Text style={{ fontSize: 12, fontWeight: "bold", lineHeight: "1.5" }}>
           {company}
@@ -13,7 +13,7 @@ export default function Experience({ company, workTimes, projects = []}) {
       </View>
       <View style={styles.projectsContainer}>
         {
-          projects.map(project => <Project {...project} />)
+          projects.map((project, index) => <Project key={index} {...project} />)
         }
       </View>
     </View>
