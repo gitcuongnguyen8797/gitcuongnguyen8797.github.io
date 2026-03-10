@@ -33,7 +33,6 @@ const EducationItem = ({ degree, institution, period, description, gpa, location
             {period && <div className="education-item__period">{period}</div>}
             <div className="education-item__institution">{institution}</div>
             {location && <div className="education-item__location">{location}</div>}
-            {description && <div className="education-item__description">{description}</div>}
         </div>
     </div>
 );
