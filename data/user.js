@@ -1,5 +1,5 @@
 const userInfo = {
-    avatar: require('../public/images/avatar.jpeg'),
+    avatar: require('../public/images/avatar2.jpg'),
     name: "Nguyen Hai Cuong",
     phone: "0366.189.687 - 0925.521.115",
     email: 'cuongnguyen.work8797@gmail.com',
@@ -39,13 +39,13 @@ const userInfo = {
         groups: [
             {
                 label: "Backend",
-                tags: ["PHP", "Laravel", "Node.js", "NestJS", "CakePHP", "Yii2"],
-                primary: ["PHP", "Laravel", "Node.js", "NestJS"]
+                tags: ["PHP", "Laravel", "Node.js", "NestJS", "C#", "CakePHP", "Yii2", ],
+                primary: ["PHP", "Laravel", "Node.js", "NestJS", "C#"]
             },
             {
                 label: "Frontend",
-                tags: ["React.js", "Next.js", "Redux", "TypeScript", "CSS/SCSS", "React Native"],
-                primary: ["React.js", "Next.js"]
+                tags: ["React.js", "Next.js",  "TypeScript", "Redux", "CSS/SCSS", "React Native"],
+                primary: ["React.js", "Next.js", "TypeScript"]
             },
             {
                 label: "Cloud & DevOps",

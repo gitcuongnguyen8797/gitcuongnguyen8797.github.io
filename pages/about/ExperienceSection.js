@@ -2,13 +2,14 @@ import React from 'react';
 import { experiencesWithoutProjects } from "data/experiences";
 import styles from "styles/page/_about.module.scss";
 
-function CompanyBlock({ company, workTimes, skills = [], description = [] }) {
+function CompanyBlock({ company, workTimes, role, skills = [], description = [] }) {
     return (
         <div className={styles.companyBlock}>
             <div className={styles.companyHeader}>
                 <span className={styles.companyName}>{company}</span>
                 <span className={styles.companyPeriod}>{workTimes}</span>
             </div>
+            <span className={styles.role}>{role}</span>
             <hr className={styles.companyDivider} />
             {skills.length > 0 && (
                 <div className={styles.techTags}>

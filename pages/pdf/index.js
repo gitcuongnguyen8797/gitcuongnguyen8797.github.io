@@ -8,14 +8,12 @@ import {
 import { useEffect, useState } from "react";
 import {  main } from "../../styles/pdf/styles";
 import GenernalInformation from './GeneralInformation'
-import Skills from "./Skills";
-import Contacts from "./Contacts";
 import Divider from "./Divider";
-import Introduction from "./Introduction";
 import Languages from "./Languages";
-import Experiences from "./Experiences";
-import Certs from "./Certs";
+import PdfCoreSkillsTags from "./PdfCoreSkillsTags";
 import Education from "./Education";
+import ProfessionalSummary from "./ProfessionalSummary";
+import WorkExperiencesSection from "./WorkExperiencesSection";
 
 const PDFViewer = dynamic(
   () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),
@@ -52,33 +50,32 @@ const PortfolioPdf = () => {
     <PDFViewer width={"100%"} height={windowHeight}>
       <Document>
         <Page size={"A4"} style={main.page}>
-          <View style={main.leftContainer}>
+          {/* ── Full-width header: avatar + name + title + contacts ── */}
+          <View style={main.header}>
             <GenernalInformation />
-            {/* Divider */}
-            <Divider />
-            <Contacts />
-
-            {/* Divider */}
-            <Divider />
-            <Languages />
-
-            {/* Divider */}
-            <Divider />
-            <Skills />
-
-            {/* Divider */}
-            <Divider />
-            <Education />
-
-            {/* Divider */}
-            {/* <Divider />
-            <Certs /> */}
           </View>
-          <View style={main.rightContainer}>
-            {/* Introduction Banner */}
-            <Introduction />
-            {/* Experiences */}
-            <Experiences />
+
+          {/* ── All sections stacked vertically ── */}
+          <View style={main.content}>
+            <ProfessionalSummary />
+           
+            <View style={main.card}>
+              <PdfCoreSkillsTags />
+            </View>
+
+            
+            <View style={main.card}>
+              <Education />
+            </View>
+
+            <View style={{ height: 20}}>
+
+            </View>
+            <WorkExperiencesSection />
+             <View style={main.card}>
+              <Languages />
+            </View>
+
           </View>
         </Page>
       </Document>

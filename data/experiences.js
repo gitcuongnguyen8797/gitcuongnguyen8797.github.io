@@ -1,41 +1,60 @@
 const experiencesWithoutProjects = [
     {
-        company: "DiproTech Co., Ltd", workTimes: "August 2024 - June 2026",
-        skills: ["Technical Leadership", "Cloud Architecture", "Infrastructure as Code (IaC)", "CI/CD Pipeline Development", "Nestjs", "NextJS", "Terraform", "AWS", "GCP", "Docker"],
+        company: "DiproTech Co., Ltd", workTimes: "February 2023 - June 2026",
+        role: "Senior Fullstack Developer",
+        skills: [ "Nestjs", "NextJS", "PHP", "C#", "CI/CD", "Terraform", "AWS", "GCP", "Docker", ],
         description: [
-            "Lead technial direction for multiple products (SaaS platform, e-commerce backend, internal tooling), acting as architect and Technical Lead on teams of 4–10 engineers.",
+            "Led technical direction for multiple products, acting as architect and Team Leader on teams of 4–10 engineers.",
             "Ensuring code quality and maintainability through code reviews, mentoring, and establishing best practices across projects.",
             "Architected and implemented scalable, production-grade infrastructure on AWS and GCP with Terraform (IaC) for 6,000 users; built robust CI/CD pipelines using GitHub Actions to automate deployments across staging and production environments.",
+            "Applied AI to improve performance of development and operations, including automating code reviews, optimizing infrastructure costs, and enhancing monitoring with AI-driven insights.",
+            "Worked closely with pre-sale teams to propose technical solutions and strategies that align with client requirements and business goals.",
+            "Implemented TDD practices to maintain high code quality and ensure ≥80% unit test coverage across projects, significantly reducing bugs and improving maintainability."
         ]
     },
     {
         company: "SupremeTech Co., Ltd", workTimes: "February 2023 - August 2024",
+        role: "Senior Fullstack Developer",
+        skills: [ "Nestjs", "NextJS", "PHP", "C#", "CI/CD", "Terraform", "AWS", "GCP", "Docker", ],
         description: [
-
+            "Built and maintained multiple projects, including an internal social networking platform, a Starbucks store management system, and a talent recruitment platform.",
+            "Designed and implemented scalable infrastructure on AWS and GCP using Terraform, ensuring high availability and performance for applications with thousands of users.",
+            "Established CI/CD pipelines using GitHub Actions to automate testing and deployment processes, significantly reducing deployment times and improving reliability.",
+            "Maintained high code quality and test coverage (≥80%) through rigorous code reviews, mentoring, and enforcing best practices across projects.",
+            "Collaborated with cross-functional teams to deliver high-quality software solutions that meet client requirements and business objectives."
         ]
     },
     {
-        company: "rakumo Co., Ltd", workTimes: "November 2021 - January 2023",
+        company: "rakumo Co., Ltd", workTimes: "February 2021 - January 2023",
+        role: "Senior Fullstack Developer",
+        skills: ["React", "PHP", "Node.js", "AWS", "Docker"],
         description: [
-
-        ]
-    },
-    {
-        company: "Golden Owl Consulting Company", workTimes: "February 2021 - November 2021",
-        description: [
-
+            "Maintained and developed features for multiple projects, including a calendar synchronization system, a task management application, and a worker hiring platform.",
+            "Set up Docker environments for development and production, streamlining the development workflow and ensuring consistency across environments.",
+            "Wrote unit tests to maintain code quality and ensure high test coverage across projects. Consistently maintained unit test coverage above 80%, ensuring code reliability and facilitating future maintenance.",
+            "Collaborated with cross-functional teams to deliver high-quality software solutions that meet client requirements."
         ]
     },
     {
         company: "Hoa Binh Joint Stock Company", workTimes: "February 2020 - February 2021",
+        role: "Junior Fullstack Developer",
+        skills: ["React", "Node.js", "On-premise Server", "Docker", "Kafka", "Zookeeper"],
         description: [
-
+            "Developed and maintained an internal ERP web application, providing a user-friendly interface for employees to access SAP features without using the SAP desktop application.",
+            "Implemented new features and optimized existing ones to enhance user experience and system performance.",
+            "Set up Docker environments for development and deployment, streamlining the development process and ensuring consistency across environments.",
+            "Wrote SQL queries to visualize data and generate reports for management, improving decision-making processes.",
+            "Built data Pipelines to synchronize data from multiple sources to a centralized database, ensuring data consistency and availability for analytics."
         ]
     },
     {
         company: "Vien Dong Investment and Trade Development Joint Stock Company", workTimes: "March 2018 - February 2020",
+        role: "Fresher Fullstack Developer",
+        skills: ["HTML", "CSS", "JavaScript", "Node.js", "On-Premise Server", "Laravel"],
         description: [
-
+            "Gained foundational experience in fullstack development, contributing to various projects and learning best practices in software engineering.",
+            "Collaborated with cross-functional teams to deliver features and maintain applications, while continuously improving coding skills and understanding of software development lifecycle.",
+            "Managed on-premise server deployments and maintenance, gaining experience in server management and deployment processes."
         ]
     }
 ]

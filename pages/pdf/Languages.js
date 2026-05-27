@@ -1,12 +1,21 @@
-import { Text, } from '@react-pdf/renderer';
-import ExperienceProgress from './ProgressBar';
+import { Text, View } from "@react-pdf/renderer";
+import React from "react";
+import userInfo from "data/user";
+import ProgressBar from "./ProgressBar";
 
+// Mirrored from ListProgress component using userInfo.languages data
 export default function Languages() {
+  const { title, listItems = [] } = userInfo.languages;
+
   return (
-    <>
-        <Text style={{ paddingBottom: 10}}>Languages</Text>
-        <ExperienceProgress label={'Vietnamese'} percent={90}/>
-        <ExperienceProgress label={'English'} percent={70}/>
-    </>
+    <View>
+      {/* .list-progress__title h3 */}
+      <Text style={{ fontSize: 11, fontWeight: "bold", color: "#1a1a2e", marginBottom: 5 }}>
+        {title}
+      </Text>
+      {listItems.map((item, i) => (
+        <ProgressBar key={i} label={item.label} percent={item.percent} />
+      ))}
+    </View>
   );
 }

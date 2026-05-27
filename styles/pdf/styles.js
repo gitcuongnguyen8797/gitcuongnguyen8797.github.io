@@ -1,21 +1,32 @@
 import { StyleSheet } from '@react-pdf/renderer';
 
 export const main = StyleSheet.create({
+    // Page flows vertically (column); paddingTop applies to every page incl. continuations
     page: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexDirection: 'column',
         backgroundColor: '#F0F0F6',
+        paddingTop: 4,
     },
-    leftContainer: {
-        display: 'flex',
-        backgroundColor: 'white',
-        width: '31.5%',
-        padding: 10
+    // Full-width top header banner
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#1a1a2e',
+        padding: '18 22',
     },
-    rightContainer: {
-        width: '67%',
-    }
+    // All sections stack vertically below the header
+    content: {
+        flex: 1,
+        flexDirection: 'column',
+        gap: 8,
+        padding: '10 12',
+    },
+    // White card — matches the section style used by ProfessionalSummary & WorkExperiencesSection
+    card: {
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        padding: '14 14',
+    },
 })
 
 export const leftMenu = StyleSheet.create({
