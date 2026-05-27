@@ -15,8 +15,8 @@ const userInfo = {
     languages: {
         title: "Languages",
         listItems: [
-            { label: "Vietnameses", percent: 90 },
-            { label: "English", percent: 70 }
+            { label: "Vietnameses", percent: 95 },
+            { label: "English", percent: 65 }
         ]
     },
 
@@ -34,10 +34,35 @@ const userInfo = {
             // { label: "Java", percent: 70 },
         ]
     },
+    coreSkills: {
+        title: "Core Skills",
+        groups: [
+            {
+                label: "Backend",
+                tags: ["PHP", "Laravel", "Node.js", "NestJS", "CakePHP", "Yii2"],
+                primary: ["PHP", "Laravel", "Node.js", "NestJS"]
+            },
+            {
+                label: "Frontend",
+                tags: ["React.js", "Next.js", "Redux", "TypeScript", "CSS/SCSS", "React Native"],
+                primary: ["React.js", "Next.js"]
+            },
+            {
+                label: "Cloud & DevOps",
+                tags: ["AWS", "GCP", "Docker", "Terraform", "GitHub Actions", "Jenkins", "AWS Lambda", "Elasticsearch"],
+                primary: ["AWS", "GCP", "Docker", "Terraform", "GitHub Actions"]
+            },
+            {
+                label: "Databases",
+                tags: ["MySQL", "PostgreSQL", "Redis"],
+                primary: ["MySQL", "PostgreSQL"]
+            }
+        ]
+    },
     description: {
         primaryTitle: `I'm Cuong Nguyen`,
         position: 'Full-Stack Developer',
-        introduction: `As a software engineer with 5 years of experience in many languages such as PHP, Laravel, NodeJS, NestJS, React JS, etc., 
+        introduction: `As a software engineer with more than 5 years of experience in many languages such as PHP, Laravel, NodeJS, NestJS, React JS, etc., 
         I want to improve my work knowledge and maximize my capabilities to bring quality products and the best performance in my work.`
     },
     certification: {
@@ -62,11 +87,11 @@ const userInfo = {
     },
 
     education: {
-        title: "Educations",
+        title: "Education",
         educations: [
              {
                 degree: "Master of Information Security",
-                institution: "Acadamy of Cryptography Techniques",
+                institution: "Academy of Cryptography Techniques",
                 location: "TP HCM, Vietnam",
                 period: "2020 - 2022",
                 gpa: "8.5/10.0",
@@ -75,7 +100,7 @@ const userInfo = {
             },
             {
                 degree: "Bachelor of Information Security",
-                institution: "Acadamy of Cryptography Techniques",
+                institution: "Academy of Cryptography Techniques",
                 location: "TP HCM, Vietnam",
                 period: "2015 - 2020",
                 gpa: "3.6/4.0",

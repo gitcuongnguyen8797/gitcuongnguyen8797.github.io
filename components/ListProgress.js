@@ -4,7 +4,7 @@ const ProgressBarItem = ({ label, percent }) => (
     <div className="progress-container">
         <div className="progress-header">
             <span className="text">{label}</span>
-            <span className="text">{percent}%</span>
+            <span className="text">{percent >= 90 ? 'Native' : percent >= 70 ? 'Intermediate' : 'Basic'}</span>
         </div>
         <div className="progress">
             <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{ width: `${percent}%` }}></div>

@@ -1,17 +1,21 @@
 @import '../abstracts/variables.module';
 
+$accent:    #f5a623;
+$navy:      #1a1a2e;
+$text-dark: #2b2b2b;
+$text-sub:  #767676;
+$card-bg:   #f8f9fc;
+
 .education-list {
     padding: 0;
-    
+
     &__title {
-        margin-bottom: 2.5vh;
-        
+        margin-bottom: 1rem;
+
         h3 {
-            font-size: 18px;
+            font-size: 0.95rem;
             font-weight: 700;
-            color: #2B2B2B;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: $text-dark;
             margin: 0;
         }
     }
@@ -19,115 +23,107 @@
     &__items {
         display: flex;
         flex-direction: column;
-        gap: 3vh;
+        gap: 0.75rem;
     }
 }
 
 .education-item {
     display: flex;
-    gap: 20px;
-    padding-left: 20px;
-    border-left: 4px solid $bg-primary;
-    position: relative;
+    gap: 12px;
+    padding: 12px;
+    background: $card-bg;
+    border-radius: 8px;
+    border: 1px solid #e8eaf0;
     align-items: flex-start;
+    transition: box-shadow 0.2s ease;
 
-    &__logo-container {
-        flex-shrink: 0;
-        position: relative;
-        margin-left: -10px;
+    &:hover {
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
     }
 
     &__logo {
-        width: 60px;
-        height: 60px;
-        border-radius: 8px;
-        background: transparent;
-       
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid $accent;
+        background: #fff;
+        flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
 
         &--default {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-color: #667eea;
-            
-            img {
-                filter: brightness(0) invert(1);
-            }
+            background: #f0f2f5;
+            border-color: #d0d5dd;
         }
     }
 
     &__content {
         flex: 1;
+        min-width: 0;
     }
 
     &__degree {
-        font-size: 16px;
-        font-weight: 600;
-        color: #2B2B2B;
-        line-height: 1.5;
-        margin-bottom: 1vh;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: $navy;
+        line-height: 1.4;
+        margin-bottom: 3px;
     }
 
     &__period {
-        font-size: 13px;
-        color: $text-muted;
+        font-size: 0.75rem;
+        color: $text-sub;
         font-weight: 400;
-        margin-bottom: 1.5vh;
         display: block;
+        margin-bottom: 4px;
     }
 
     &__institution {
-        font-size: 15px;
-        color: #1890FF;
-        font-weight: 500;
-        margin-bottom: 0.75vh;
+        font-size: 0.78rem;
+        color: $accent;
+        font-weight: 600;
+        margin-bottom: 3px;
         line-height: 1.4;
     }
 
     &__location {
-        font-size: 13px;
-        color: $text-muted;
-        margin-bottom: 1vh;
+        font-size: 0.73rem;
+        color: $text-sub;
         display: flex;
         align-items: center;
-        
+        gap: 4px;
+
         &:before {
-            content: "📍";
-            margin-right: 6px;
-            font-size: 12px;
+            content: "▸";
+            color: $accent;
+            font-size: 0.7rem;
         }
     }
 
     &__gpa {
-        font-size: 14px;
-        color: #52C41A;
+        font-size: 0.73rem;
+        color: #2e7d32;
         font-weight: 600;
-        margin-bottom: 1.5vh;
-        display: block;
+        display: inline-block;
+        margin-top: 4px;
+        background: #e8f5e9;
+        border-radius: 4px;
+        padding: 1px 6px;
     }
 
     &__description {
-        font-size: 14px;
-        color: $text-muted;
-        line-height: 1.6;
-        margin-top: 1vh;
+        font-size: 0.75rem;
+        color: $text-sub;
+        line-height: 1.5;
+        margin-top: 4px;
     }
 }
 
-// Responsive design
 @media screen and (max-width: 768px) {
     .education-item {
-        padding-left: 15px;
-        border-left-width: 3px;
-        gap: 15px;
+        gap: 10px;
         
         &__logo-container {
             margin-left: -8px;

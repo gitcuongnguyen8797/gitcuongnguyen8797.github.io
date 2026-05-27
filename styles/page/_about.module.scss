@@ -1,41 +1,196 @@
-.banner-section {
+// ── Shared ──────────────────────────────────────────────────────────────────
+$accent:      #f5a623;
+$dark-navy:   #1a1a2e;
+$text-body:   #444;
+$text-muted:  #888;
+$bg-card:     #f8f9fc;
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: $dark-navy;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-bottom: 6px;
+    border-bottom: 2.5px solid $accent;
+    margin-bottom: 1.25rem;
+}
+
+// ── Professional Summary ─────────────────────────────────────────────────────
+.summarySection {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+}
+
+.summaryText {
+    font-size: 0.9rem;
+    color: $text-body;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+
+    strong {
+        color: $dark-navy;
+    }
+}
+
+.highlightGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.highlightCard {
+    background: $bg-card;
+    border-left: 3px solid $accent;
+    border-radius: 0 5px 5px 0;
+    padding: 0.75rem 1rem;
+}
+
+.highlightNumber {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $dark-navy;
+    line-height: 1;
+}
+
+.highlightLabel {
+    font-size: 0.75rem;
+    color: $text-muted;
+    margin-top: 3px;
+}
+
+// ── Experience ───────────────────────────────────────────────────────────────
+.experienceSection {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.companyBlock {
+    margin-bottom: 2rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.companyHeader {
     display: flex;
-    background-color: $bg-white;
-    height: 50vh;
-    background-image: url('../../public/images/banner-bg.png');
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: auto;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+}
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        padding-left: 1.75vw;
-    }
+.companyName {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $dark-navy;
+}
 
-    &__image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.companyPeriod {
+    font-size: 0.8rem;
+    color: $text-muted;
+    white-space: nowrap;
+}
 
-    .banner-body {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        padding-bottom: 15vh;
+.companyDivider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 6px 0 12px;
+}
 
-        &__content {
-            padding: 0 1vw;
+.projectsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.projectBlock {
+    padding: 0.75rem 1rem;
+    background: $bg-card;
+    border-radius: 6px;
+    border-left: 3px solid lighten($accent, 20%);
+}
+
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 2px;
+}
+
+.projectName {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $dark-navy;
+}
+
+.projectPeriod {
+    font-size: 0.75rem;
+    color: $text-muted;
+    white-space: nowrap;
+}
+
+.projectRole {
+    font-size: 0.8rem;
+    color: $accent;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 0.6rem;
+}
+
+.techTag {
+    background: #fff4e0;
+    color: #b07400;
+    border: 1px solid $accent;
+    border-radius: 3px;
+    padding: 1px 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.respList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        font-size: 0.82rem;
+        color: $text-body;
+        padding: 2px 0 2px 1rem;
+        position: relative;
+        line-height: 1.5;
+
+        &::before {
+            content: '•';
+            color: $accent;
+            font-weight: 700;
+            position: absolute;
+            left: 2px;
         }
     }
+}
 
-
-    @media screen and (max-width: 757px) {
-        margin-top: 2vh;
-
-        &__image {
-            display: none !important;
-        }
-    }
+.projectLabel {
+    color: $dark-navy;
+    font-size: 0.78rem;
 }

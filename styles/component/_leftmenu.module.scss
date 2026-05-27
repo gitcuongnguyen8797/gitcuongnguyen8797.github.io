@@ -1,3 +1,6 @@
+$accent:    #f5a623;
+$dark-navy: #1a1a2e;
+
 .left-menu {
 
     &__section1 {}
@@ -12,4 +15,54 @@
         top: 0;
         left: 0;
     }
+}
+
+// ── Core Skills Tags ────────────────────────────────────────────────────────
+.coreSkills {
+    padding: 4px 0;
+}
+
+.coreSkillsTitle {
+    h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: $dark-navy;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.skillGroup {
+    margin-bottom: 0.75rem;
+}
+
+.skillGroupLabel {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: $accent;
+    margin-bottom: 5px;
+}
+
+.skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skillTag {
+    background: #f0f2f5;
+    color: #555;
+    border: 1px solid #d0d5dd;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.skillTagPrimary {
+    background: #fff4e0;
+    color: #b07400;
+    border-color: $accent;
+    font-weight: 600;
 }

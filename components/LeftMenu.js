@@ -3,6 +3,7 @@ import React from 'react';
 import InformationCard from './InformationCard';
 import ListProgress from './ListProgress';
 import EducationList from './EducationList';
+import CoreSkillsTags from './CoreSkillsTags';
 
 
 const LeftMenu = () => (
@@ -14,8 +15,8 @@ const LeftMenu = () => (
         {/* Languages */}
         <div className='left-menu__section3'><ListProgress {...userInfo.languages} /></div><hr />
 
-        {/* Skills */}
-        <div className='left-menu__section2'><ListProgress {...userInfo.skills} /></div><hr />
+        {/* Core Skills */}
+        <div className='left-menu__section2'><CoreSkillsTags {...userInfo.coreSkills} /></div><hr />
 
         {/* Education */}
         <div className='left-menu__section4'><EducationList {...userInfo.education} /></div><hr />

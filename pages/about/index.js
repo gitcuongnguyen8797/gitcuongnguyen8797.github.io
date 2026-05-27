@@ -15,13 +15,14 @@ const About = ({title, description, keywords}) => {
             </Head>
 
             <div className="row">
-                {/* Left Menu */}
-                <div className="col-sm-12 col-md-4 col-lg-3 position-relative"><div className="card card-body"><LeftMenu /></div> </div>
+                {/* Left Sidebar */}
+                <div className="col-sm-12 col-md-4 col-lg-3 position-relative">
+                    <div className="card card-body"><LeftMenu /></div>
+                </div>
 
-                {/* Right Container */}
-                <div className="col-sm-12 col-md-8 col-lg-9">
+                {/* Main Content */}
+                <div className="col-sm-12 col-md-8 col-lg-9 py-3 d-flex flex-column gap-3">
                     <BannerSection />
-                    <br />
                     <ExperienceSection />
                 </div>
             </div>
