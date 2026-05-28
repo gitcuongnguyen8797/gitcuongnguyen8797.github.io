@@ -4,7 +4,7 @@ const userInfo = {
     phone: "0366.189.687 - 0925.521.115",
     email: 'cuongnguyen.work8797@gmail.com',
     location: 'Da Nang City',
-    title: "Full Stack Developer",
+    title: "Senior Full Stack Developer",
     socials: [
         { href: "https://www.facebook.com/profile.php?id=100003997881975", icon: require('../public/icons/icons-facebook.svg') },
         { href: "https://www.instagram.com/cuong08071997/", icon: require('../public/icons/icons-instagram.svg') },
