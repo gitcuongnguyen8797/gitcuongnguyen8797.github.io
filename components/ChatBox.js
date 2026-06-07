@@ -1,20 +1,33 @@
+'use client'
 import React, { useState, useEffect, useRef } from "react";
+import { v4 as uuidv4 } from 'uuid';
+
+const INITIAL_TIME_PLACEHOLDER = "00:00:00";
+
+const createInitialMessages = () => ([
+  { type: "bot", text: "System initialized...", time: INITIAL_TIME_PLACEHOLDER },
+  { type: "bot", text: "Welcome to the terminal", time: INITIAL_TIME_PLACEHOLDER },
+  { type: "bot", text: "Message relay to operator is ready", time: INITIAL_TIME_PLACEHOLDER },
+]);
 
 const ChatBox = () => {
-  const initializedTime = new Date().toLocaleTimeString('en-US', {
-    hour12: false,
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-  });
-  const [messages, setMessages] = useState([
-    { type: "bot", text: "System initialized...", time: initializedTime },
-    { type: "bot", text: "Welcome to the terminal", time: initializedTime },
-    { type: "bot", text: "AI Assistant With RAG is ready", time: initializedTime },
-  ]);
+  const getCurrentTime = () => {
+    return new Date().toLocaleTimeString('en-US', {
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+  };
+
+  const [messages, setMessages] = useState(createInitialMessages);
   const [inputValue, setInputValue] = useState("");
   const [batteryLevel, setBatteryLevel] = useState(62);
+  const [isSending, setIsSending] = useState(false);
   const messagesEndRef = useRef(null);
+  const sessionIdRef = useRef(uuidv4());
+  const wsRef = useRef(null);
+
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -25,64 +38,98 @@ const ChatBox = () => {
   }, [messages]);
 
   useEffect(() => {
-    // Simulate real-time clock
-    const timer = setInterval(() => {
-      const now = new Date();
-      const timeString = now.toLocaleTimeString('en-US', { 
-        hour12: false, 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit' 
-      });
-      // Update clock if needed
-    }, 1000);
+    const ws = new WebSocket(`ws://localhost:8000/${sessionIdRef.current}`);
+    wsRef.current = ws;
 
-    return () => clearInterval(timer);
+    ws.onopen = () => {
+      console.log("WebSocket connection opened");
+    };
+
+    ws.onmessage = (event) => {
+      console.log("WebSocket message received:", event.data);
+
+      setMessages((prev) => [
+        ...prev,
+        { type: "bot", text: event.data, time: getCurrentTime() },
+      ]);
+    };
+
+    ws.onclose = () => {
+      console.log("WebSocket connection closed");
+    };
+
+    ws.onerror = (error) => {
+      console.error("WebSocket error:", error);
+    };
+
+    return () => {
+      ws.close();
+    };
   }, []);
 
-  const handleSend = () => {
-    if (inputValue.trim()) {
-      const now = new Date();
-      const timeString = now.toLocaleTimeString('en-US', { 
-        hour12: false, 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit' 
-      });
+  useEffect(() => {
+    const mountedAt = getCurrentTime();
+    setMessages((prev) =>
+      prev.map((message, index) => {
+        if (index > 2 || message.time !== INITIAL_TIME_PLACEHOLDER) {
+          return message;
+        }
 
-      setMessages([...messages, { 
-        type: "user", 
-        text: inputValue, 
-        time: timeString 
-      }]);
+        return {
+          ...message,
+          time: mountedAt,
+        };
+      })
+    );
+  }, []);
 
-      // Simulate bot response
-      setTimeout(() => {
-        const responses = [
-          "Command executed successfully",
-          "Processing your request...",
-          "System status: ONLINE",
-          "Access granted",
-          "Initializing protocol...",
-        ];
-        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-        
-        const responseTime = new Date();
-        const responseTimeString = responseTime.toLocaleTimeString('en-US', { 
-          hour12: false, 
-          hour: '2-digit', 
-          minute: '2-digit', 
-          second: '2-digit' 
-        });
 
-        setMessages(prev => [...prev, { 
-          type: "bot", 
-          text: Responses(inputValue) || randomResponse, 
-          time: responseTimeString 
-        }]);
-      }, 1000);
+  const handleLocalCommand = (command) => {
+    if (command === 'clear' || command === 'cls') {
+      setMessages([]);
+      return true;
+    }
 
-      setInputValue("");
+    return false;
+  };
+
+  const handleSend = async () => {
+    const trimmedInput = inputValue.trim();
+    if (!trimmedInput || isSending) {
+      return;
+    }
+
+    const requestTime = getCurrentTime();
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        type: "user",
+        text: trimmedInput,
+        time: requestTime,
+      },
+    ]);
+    setInputValue("");
+
+    if (handleLocalCommand(trimmedInput.toLowerCase())) {
+      return;
+    }
+
+    setIsSending(true);
+
+    try {
+      wsRef.current.send(trimmedInput);
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          type: "bot",
+          text: `Delivery failed: ${error.message}`,
+          time: getCurrentTime(),
+        },
+      ]);
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -91,12 +138,6 @@ const ChatBox = () => {
       handleSend();
     }
   };
-
-  const Responses = (response) => {
-    if (response == 'clear' || response == 'cls') {
-      setMessages([]);
-    }
-  }
 
   return (
     <div className="cyber-chatbox">
@@ -145,11 +186,12 @@ const ChatBox = () => {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyPress}
           placeholder="Enter command..."
           className="input-field"
+          disabled={isSending}
         />
-        <button onClick={handleSend} className="input-button">
+        <button onClick={handleSend} className="input-button" disabled={isSending}>
           <span className="button-text">SEND</span>
           <div className="button-glow"></div>
         </button>
