@@ -38,7 +38,7 @@ const ChatBox = () => {
   }, [messages]);
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://localhost:8000/${sessionIdRef.current}`);
+    const ws = new WebSocket(`wss://murmuring-frantic-startle.ngrok-free.dev/${sessionIdRef.current}`);
     wsRef.current = ws;
 
     ws.onopen = () => {
