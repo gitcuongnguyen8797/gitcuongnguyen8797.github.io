@@ -1,9 +1,10 @@
 const userInfo = {
     avatar: require('../public/images/avatar2.jpg'),
     name: "Nguyen Hai Cuong",
+    dob: "08/07/1997",
     phone: "0366.189.687 - 0925.521.115",
     email: 'cuongnguyen.work8797@gmail.com',
-    location: 'Da Nang City',
+    location: 'Ho Chi Minh City',
     title: "Senior Full Stack Developer",
     socials: [
         { href: "https://www.facebook.com/profile.php?id=100003997881975", icon: require('../public/icons/icons-facebook.svg') },
@@ -44,8 +45,8 @@ const userInfo = {
             },
             {
                 label: "Frontend",
-                tags: ["React.js", "Next.js",  "TypeScript", "Redux", "CSS/SCSS", "React Native"],
-                primary: ["React.js", "Next.js", "TypeScript"]
+                tags: ["React.js", "Next.js",  "TypeScript", "Flutter", "Redux", "CSS/SCSS", "React Native", ],
+                primary: ["React.js", "Next.js", "TypeScript", "Flutter"]
             },
             {
                 label: "Cloud & DevOps",
@@ -61,29 +62,12 @@ const userInfo = {
     },
     description: {
         primaryTitle: `I'm Cuong Nguyen`,
-        position: 'Full-Stack Developer',
-        introduction: `As a software engineer with more than 5 years of experience in many languages such as PHP, Laravel, NodeJS, NestJS, React JS, etc., 
-        I want to improve my work knowledge and maximize my capabilities to bring quality products and the best performance in my work.`
+        position: 'Senior Full-Stack Developer',
+        introduction: `Senior Full Stack Developer with 8+ years of experience designing and delivering scalable, production-grade applications across backend, frontend, and cloud infrastructure. Proficient in PHP, Laravel, Node.js, NestJS, React.js, Next.js, and cloud platforms including AWS and GCP. Experienced in leading engineering teams of 4–10 developers, driving technical architecture decisions, and consistently maintaining ≥80% test coverage. Passionate about clean code, TDD, and applying AI/automation to improve development efficiency and system reliability.`
     },
     certification: {
         title: "Certifications",
-        certs: [
-            {
-                title: 'HackerRank',
-                score: '',
-                link: '',
-            },
-            {
-                title: 'IELTS',
-                score: '',
-                link: '',
-            },
-            {
-                title: 'AWS',
-                score: '',
-                link: '',
-            }
-        ]
+        certs: []
     },
 
     education: {

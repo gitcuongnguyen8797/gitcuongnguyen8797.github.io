@@ -5,7 +5,6 @@ export const main = StyleSheet.create({
     page: {
         flexDirection: 'column',
         backgroundColor: '#F0F0F6',
-        paddingTop: 4,
     },
     // Full-width top header banner
     header: {

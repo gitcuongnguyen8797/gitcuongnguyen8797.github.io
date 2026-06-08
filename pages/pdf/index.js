@@ -68,7 +68,7 @@ const PortfolioPdf = () => {
               <Education />
             </View>
 
-            <View style={{ height: 20}}>
+            <View style={{ height: 60}}>
 
             </View>
             <WorkExperiencesSection />

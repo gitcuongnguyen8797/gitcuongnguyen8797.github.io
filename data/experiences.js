@@ -1,15 +1,15 @@
 const experiencesWithoutProjects = [
     {
-        company: "DiproTech Co., Ltd", workTimes: "February 2023 - June 2026",
+        company: "DiproTech Co., Ltd", workTimes: "August 2024 - June 2026",
         role: "Senior Fullstack Developer",
-        skills: [ "Nestjs", "NextJS", "PHP", "C#", "CI/CD", "Terraform", "AWS", "GCP", "Docker", ],
+        skills: [ "Nestjs", "NextJS", "PHP", "C#", "CI/CD", "Terraform", "AWS", "GCP", "Docker", "Flutter", "React Native"],
         description: [
-            "Led technical direction for multiple products, acting as architect and Team Leader on teams of 4–10 engineers.",
-            "Ensuring code quality and maintainability through code reviews, mentoring, and establishing best practices across projects.",
-            "Architected and implemented scalable, production-grade infrastructure on AWS and GCP with Terraform (IaC) for 6,000 users; built robust CI/CD pipelines using GitHub Actions to automate deployments across staging and production environments.",
-            "Applied AI to improve performance of development and operations, including automating code reviews, optimizing infrastructure costs, and enhancing monitoring with AI-driven insights.",
-            "Worked closely with pre-sale teams to propose technical solutions and strategies that align with client requirements and business goals.",
-            "Implemented TDD practices to maintain high code quality and ensure ≥80% unit test coverage across projects, significantly reducing bugs and improving maintainability."
+            "Led technical architecture and end-to-end delivery for 3+ simultaneous product lines as Team Leader on teams of 4–10 engineers, owning decisions from system design to production release.",
+            "Established code review processes, mentoring frameworks, and engineering best practices that improved team velocity and reduced defect rates across all projects.",
+            "Architected and provisioned scalable cloud infrastructure on AWS and GCP using Terraform (IaC), supporting 6,000+ active users; automated deployments across staging and production with GitHub Actions CI/CD pipelines.",
+            "Integrated AI-assisted tooling to automate code reviews, optimize cloud infrastructure costs, and strengthen observability, reducing operational overhead and improving incident response time.",
+            "Partnered with pre-sales teams to design and present technical proposals, translating client requirements into actionable architecture plans and effort estimations.",
+            "Enforced Test-Driven Development (TDD) across all projects, achieving ≥80% unit test coverage consistently and driving measurable improvements in code stability and maintainability."
         ]
     },
     {
@@ -17,11 +17,11 @@ const experiencesWithoutProjects = [
         role: "Senior Fullstack Developer",
         skills: [ "Nestjs", "NextJS", "PHP", "C#", "CI/CD", "Terraform", "AWS", "GCP", "Docker", ],
         description: [
-            "Built and maintained multiple projects, including an internal social networking platform, a Starbucks store management system, and a talent recruitment platform.",
-            "Designed and implemented scalable infrastructure on AWS and GCP using Terraform, ensuring high availability and performance for applications with thousands of users.",
-            "Established CI/CD pipelines using GitHub Actions to automate testing and deployment processes, significantly reducing deployment times and improving reliability.",
-            "Maintained high code quality and test coverage (≥80%) through rigorous code reviews, mentoring, and enforcing best practices across projects.",
-            "Collaborated with cross-functional teams to deliver high-quality software solutions that meet client requirements and business objectives."
+            "Designed and delivered 4 concurrent products — an internal social platform, a Starbucks JP store management system, a talent recruitment platform, and a social travel blog network.",
+            "Architected multi-cloud infrastructure on AWS and GCP with Terraform, ensuring high availability, auto-scaling, and disaster recovery for all production workloads.",
+            "Implemented an Elasticsearch data synchronization pipeline for the Starbucks JP project using AWS Lambda, enabling real-time product search and operational reporting.",
+            "Built end-to-end CI/CD pipelines with GitHub Actions, reducing manual deployment effort, accelerating release cycles, and increasing deployment reliability.",
+            "Achieved ≥80% unit test coverage across all projects through structured code reviews, developer mentoring, and enforced quality gates."
         ]
     },
     {
@@ -29,10 +29,10 @@ const experiencesWithoutProjects = [
         role: "Senior Fullstack Developer",
         skills: ["React", "PHP", "Node.js", "AWS", "Docker"],
         description: [
-            "Maintained and developed features for multiple projects, including a calendar synchronization system, a task management application, and a worker hiring platform.",
-            "Set up Docker environments for development and production, streamlining the development workflow and ensuring consistency across environments.",
-            "Wrote unit tests to maintain code quality and ensure high test coverage across projects. Consistently maintained unit test coverage above 80%, ensuring code reliability and facilitating future maintenance.",
-            "Collaborated with cross-functional teams to deliver high-quality software solutions that meet client requirements."
+            "Developed and maintained 2 enterprise-grade products: a Google Calendar synchronization platform, a construction task-management checklist app.",
+            "Led infrastructure setup using Docker and GCP with Terraform, ensuring environment parity between development and production and streamlining onboarding for new engineers.",
+            "Implemented CI/CD workflows on GitHub Actions integrated with GCP, automating testing and deployment pipelines and reducing manual release effort.",
+            "Maintained ≥80% unit test coverage across all projects and authored comprehensive system design, database design, and setup documentation to enable knowledge transfer."
         ]
     },
     {
@@ -40,11 +40,10 @@ const experiencesWithoutProjects = [
         role: "Junior Fullstack Developer",
         skills: ["React", "Node.js", "On-premise Server", "Docker", "Kafka", "Zookeeper"],
         description: [
-            "Developed and maintained an internal ERP web application, providing a user-friendly interface for employees to access SAP features without using the SAP desktop application.",
-            "Implemented new features and optimized existing ones to enhance user experience and system performance.",
-            "Set up Docker environments for development and deployment, streamlining the development process and ensuring consistency across environments.",
-            "Wrote SQL queries to visualize data and generate reports for management, improving decision-making processes.",
-            "Built data Pipelines to synchronize data from multiple sources to a centralized database, ensuring data consistency and availability for analytics."
+            "Built an internal ERP web application that bridged company employees to SAP workflows through a modern browser interface, eliminating dependency on the SAP desktop client and improving adoption across departments.",
+            "Engineered event-driven data pipelines with Kafka and Zookeeper to synchronize data from multiple source systems into a centralized data warehouse, ensuring consistency and availability for business analytics.",
+            "Containerized development and production environments with Docker, standardizing deployments and reducing environment-related failures.",
+            "Designed and executed SQL-based reporting dashboards for management, translating raw operational data into actionable business insights."
         ]
     },
     {
@@ -52,9 +51,9 @@ const experiencesWithoutProjects = [
         role: "Fresher Fullstack Developer",
         skills: ["HTML", "CSS", "JavaScript", "Node.js", "On-Premise Server", "Laravel"],
         description: [
-            "Gained foundational experience in fullstack development, contributing to various projects and learning best practices in software engineering.",
-            "Collaborated with cross-functional teams to deliver features and maintain applications, while continuously improving coding skills and understanding of software development lifecycle.",
-            "Managed on-premise server deployments and maintenance, gaining experience in server management and deployment processes."
+            "Delivered full-stack features across multiple web projects using Laravel, Node.js, and JavaScript, building a solid foundation in software architecture, coding best practices, and the full software development lifecycle.",
+            "Managed on-premise server deployments and routine maintenance — including configuration, monitoring, and troubleshooting — gaining practical hands-on infrastructure experience.",
+            "Collaborated with PMs and cross-functional teams to ship features on schedule, developing strong habits in agile delivery, requirement analysis, and stakeholder communication."
         ]
     }
 ]

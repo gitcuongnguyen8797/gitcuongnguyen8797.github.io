@@ -19,7 +19,7 @@ export default function BannerSection() {
                 infrastructure on <strong>AWS &amp; GCP</strong>. Proven leadership as a{" "}
                 <strong>Team Leader</strong> — architecting systems, establishing CI/CD pipelines,
                 mentoring engineers, and consistently maintaining{" "}
-                <strong>≥80% unit-test coverage</strong>.
+                <strong>≥ 80% unit-test coverage</strong>.
                 Passionate about clean, maintainable code and engineering practices that scale.
             </p>
             <div className={styles.highlightGrid}>

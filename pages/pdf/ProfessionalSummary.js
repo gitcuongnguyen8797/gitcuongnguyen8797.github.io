@@ -115,19 +115,19 @@ export default function ProfessionalSummary() {
                 {". Proven leadership as a "}
                 <Text style={styles.bold}>Team Leader</Text>
                 {" \u2014 architecting systems, establishing CI/CD pipelines, mentoring engineers, and consistently maintaining "}
-                <Text style={styles.bold}>{"\u226580% unit-test coverage"}</Text>
+                <Text style={styles.bold}>{">= 80% unit-test coverage"}</Text>
                 {". Passionate about clean, maintainable code and engineering practices that scale."}
             </Text>
 
             {/* .highlightGrid as 2 flex rows */}
-            <View style={styles.highlightRow}>
+            {/* <View style={styles.highlightRow}>
                 <HighlightCard {...highlights[0]} />
                 <HighlightCard {...highlights[1]} />
-            </View>
-            <View style={styles.highlightRowLast}>
+            </View> */}
+            {/* <View style={styles.highlightRowLast}>
                 <HighlightCard {...highlights[2]} />
                 <HighlightCard {...highlights[3]} />
-            </View>
+            </View> */}
         </View>
     );
 }
