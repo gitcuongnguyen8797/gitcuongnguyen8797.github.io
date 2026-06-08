@@ -24,9 +24,12 @@ const ChatBox = () => {
   const [inputValue, setInputValue] = useState("");
   const [batteryLevel, setBatteryLevel] = useState(62);
   const [isSending, setIsSending] = useState(false);
+  const [isReplying, setIsReplying] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
   const sessionIdRef = useRef(uuidv4());
   const wsRef = useRef(null);
+  const isStreamingRef = useRef(false);
 
 
   const scrollToBottom = () => {
@@ -39,6 +42,7 @@ const ChatBox = () => {
 
   useEffect(() => {
     const ws = new WebSocket(`wss://murmuring-frantic-startle.ngrok-free.dev/${sessionIdRef.current}`);
+    // const ws = new WebSocket(`ws://localhost:8000/${sessionIdRef.current}`);
     wsRef.current = ws;
 
     ws.onopen = () => {
@@ -46,20 +50,61 @@ const ChatBox = () => {
     };
 
     ws.onmessage = (event) => {
-      console.log("WebSocket message received:", event.data);
+      const chunk = event.data;
+      console.log("WebSocket message received:", chunk);
 
-      setMessages((prev) => [
-        ...prev,
-        { type: "bot", text: event.data, time: getCurrentTime() },
-      ]);
+      if (chunk === "[DONE]") {
+        isStreamingRef.current = false;
+        setIsTyping(false);
+        setIsReplying(false);
+        setMessages((prev) => {
+          const updated = [...prev];
+          for (let i = updated.length - 1; i >= 0; i--) {
+            if (updated[i].type === "bot" && updated[i].streaming) {
+              updated[i] = { ...updated[i], streaming: false };
+              break;
+            }
+          }
+          return updated;
+        });
+        return;
+      }
+
+      if (!isStreamingRef.current) {
+        // First chunk: hide typing indicator and create a new streaming message
+        isStreamingRef.current = true;
+        setIsTyping(false);
+        setMessages((prev) => [
+          ...prev,
+          { type: "bot", text: chunk, time: getCurrentTime(), streaming: true },
+        ]);
+      } else {
+        // Subsequent chunks: append to the last streaming bot message
+        setMessages((prev) => {
+          const updated = [...prev];
+          for (let i = updated.length - 1; i >= 0; i--) {
+            if (updated[i].type === "bot" && updated[i].streaming) {
+              updated[i] = { ...updated[i], text: updated[i].text + chunk };
+              break;
+            }
+          }
+          return updated;
+        });
+      }
     };
 
     ws.onclose = () => {
       console.log("WebSocket connection closed");
+      isStreamingRef.current = false;
+      setIsTyping(false);
+      setIsReplying(false);
     };
 
     ws.onerror = (error) => {
       console.error("WebSocket error:", error);
+      isStreamingRef.current = false;
+      setIsTyping(false);
+      setIsReplying(false);
     };
 
     return () => {
@@ -95,7 +140,7 @@ const ChatBox = () => {
 
   const handleSend = async () => {
     const trimmedInput = inputValue.trim();
-    if (!trimmedInput || isSending) {
+    if (!trimmedInput || isSending || isReplying) {
       return;
     }
 
@@ -116,10 +161,17 @@ const ChatBox = () => {
     }
 
     setIsSending(true);
+    setIsTyping(true);
+    setIsReplying(true);
 
     try {
+      if (!wsRef.current || wsRef.current.readyState !== WebSocket.OPEN) {
+        throw new Error("Connection lost. Please refresh the page.");
+      }
       wsRef.current.send(trimmedInput);
     } catch (error) {
+      setIsTyping(false);
+      setIsReplying(false);
       setMessages((prev) => [
         ...prev,
         {
@@ -174,6 +226,20 @@ const ChatBox = () => {
               <div className="message-line"></div>
             </div>
           ))}
+          {isTyping && (
+            <div className="message message--bot message--typing">
+              <div className="message-content">
+                <span className="message-time">[{getCurrentTime()}]</span>
+                <span className="message-text">
+                  <span className="typing-indicator">
+                    <span className="typing-dot"></span>
+                    <span className="typing-dot"></span>
+                    <span className="typing-dot"></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          )}
           <div ref={messagesEndRef} />
         </div>
       </div>
@@ -189,9 +255,9 @@ const ChatBox = () => {
           onKeyDown={handleKeyPress}
           placeholder="Enter command..."
           className="input-field"
-          disabled={isSending}
+          disabled={isSending || isReplying}
         />
-        <button onClick={handleSend} className="input-button" disabled={isSending}>
+        <button onClick={handleSend} className="input-button" disabled={isSending || isReplying}>
           <span className="button-text">SEND</span>
           <div className="button-glow"></div>
         </button>

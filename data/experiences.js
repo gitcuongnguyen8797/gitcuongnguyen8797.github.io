@@ -5,9 +5,9 @@ const experiencesWithoutProjects = [
         skills: [ "Nestjs", "NextJS", "PHP", "C#", "CI/CD", "Terraform", "AWS", "GCP", "Docker", "Flutter", "React Native"],
         description: [
             "Led technical architecture and end-to-end delivery for 3+ simultaneous product lines as Team Leader on teams of 4–10 engineers, owning decisions from system design to production release.",
-            "Established code review processes, mentoring frameworks, and engineering best practices that improved team velocity and reduced defect rates across all projects.",
+            "Established code review processes, mentoring frameworks, and engineering best practices across all projects.",
             "Architected and provisioned scalable cloud infrastructure on AWS and GCP using Terraform (IaC), supporting 6,000+ active users; automated deployments across staging and production with GitHub Actions CI/CD pipelines.",
-            "Integrated AI-assisted tooling to automate code reviews, optimize cloud infrastructure costs, and strengthen observability, reducing operational overhead and improving incident response time.",
+            "Integrated GitHub Copilot to assist code reviews, identify infrastructure cost optimization opportunities, and strengthen observability across all production workloads.",
             "Partnered with pre-sales teams to design and present technical proposals, translating client requirements into actionable architecture plans and effort estimations.",
             "Enforced Test-Driven Development (TDD) across all projects, achieving ≥80% unit test coverage consistently and driving measurable improvements in code stability and maintainability."
         ]

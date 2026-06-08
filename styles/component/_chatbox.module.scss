@@ -4,6 +4,11 @@
     50% { opacity: 0.5; }
 }
 
+@keyframes typingBounce {
+    0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+    40% { transform: translateY(-6px); opacity: 1; }
+}
+
 @keyframes scan {
     0% { transform: translateY(-100%); }
     100% { transform: translateY(100%); }
@@ -300,7 +305,7 @@
 
                 &-text {
                     color: #00ff88;
-                    font-size: 13px;
+                    font-size: 15px;
                     line-height: 1.4;
                     flex: 1;
                 }
@@ -331,6 +336,26 @@
 
                     .message-line {
                         background: linear-gradient(90deg, #00ff88, transparent);
+                    }
+                }
+
+                .typing-indicator {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 2px 0;
+
+                    .typing-dot {
+                        width: 7px;
+                        height: 7px;
+                        background: #00ff88;
+                        border-radius: 50%;
+                        box-shadow: 0 0 6px #00ff88;
+                        animation: typingBounce 1.2s infinite ease-in-out;
+
+                        &:nth-child(1) { animation-delay: 0s; }
+                        &:nth-child(2) { animation-delay: 0.2s; }
+                        &:nth-child(3) { animation-delay: 0.4s; }
                     }
                 }
             }
