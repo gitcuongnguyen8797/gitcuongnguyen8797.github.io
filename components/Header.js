@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "public/logo.svg";
 import Link from "next/link";
@@ -18,7 +18,7 @@ const Banner1 = () => (
         <h4>Cyber security master&apos;s degree</h4>
         <p>Full-Stack Developer</p>
       </div>
-      <div className="banner-content__right" style={{ marginLeft: -150}}>
+      <div className="banner-content__right">
         <ChatBox />
       </div>
     </div>
@@ -64,17 +64,22 @@ const Banner4 = () => (
 );
 
 export default function Header({ menuList = [] }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <>
       <div className="header">
         <div className="header__logo">
           <Image src={Logo} layout="responsive" alt="Full-Stack Developer" />
         </div>
-        <div className="header__menu">
+        <div className={`header__menu${menuOpen ? " header__menu--open" : ""}`}>
           <ul className="menu">
             {menuList.map((value, index) => (
-              <li key={index} className="menu__item ">
-                <Link href={value.href} className="txt--white">
+              <li key={index} className="menu__item">
+                <Link href={value.href} className="txt--white" onClick={closeMenu}>
                   {value.title}
                 </Link>
               </li>
@@ -82,6 +87,16 @@ export default function Header({ menuList = [] }) {
           </ul>
         </div>
         <div className="header__lang"></div>
+        <button
+          className={`header__hamburger${menuOpen ? " header__hamburger--open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
 
       <Swiper
