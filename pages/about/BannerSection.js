@@ -22,14 +22,14 @@ export default function BannerSection() {
                 <strong>≥ 80% unit-test coverage</strong>.
                 Passionate about clean, maintainable code and engineering practices that scale.
             </p>
-            <div className={styles.highlightGrid}>
+            {/* <div className={styles.highlightGrid}>
                 {highlights.map(({ number, label }) => (
                     <div key={label} className={styles.highlightCard}>
                         <div className={styles.highlightNumber}>{number}</div>
                         <div className={styles.highlightLabel}>{label}</div>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </section>
     );
 }

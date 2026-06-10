@@ -14,7 +14,7 @@ export default function Languages() {
         {title}
       </Text>
       {listItems.map((item, i) => (
-        <ProgressBar key={i} label={item.label} percent={item.percent} />
+        <ProgressBar key={i} label={item.label} percent={item.percent} description={item.description} />
       ))}
     </View>
   );

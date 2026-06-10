@@ -2,6 +2,7 @@ import React from "react";
 import LeftMenu from "@/components/LeftMenu";
 import ExperienceSection from "./ExperienceSection";
 import BannerSection from "./BannerSection";
+import ProjectsSection from "./ProjectsSection";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 
@@ -24,6 +25,7 @@ const About = ({title, description, keywords}) => {
                 <div className="col-sm-12 col-md-8 col-lg-9 py-3 d-flex flex-column gap-3">
                     <BannerSection />
                     <ExperienceSection />
+                    <ProjectsSection />
                 </div>
             </div>
             <div className="pt-5"><Footer /></div>

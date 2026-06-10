@@ -14,6 +14,7 @@ import PdfCoreSkillsTags from "./PdfCoreSkillsTags";
 import Education from "./Education";
 import ProfessionalSummary from "./ProfessionalSummary";
 import WorkExperiencesSection from "./WorkExperiencesSection";
+import ProjectsSection from "./ProjectsSection";
 
 const PDFViewer = dynamic(
   () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),
@@ -68,14 +69,23 @@ const PortfolioPdf = () => {
               <Education />
             </View>
 
-            <View style={{ height: 60}}>
-
-            </View>
-            <WorkExperiencesSection />
-             <View style={main.card}>
+            <View style={main.card}>
               <Languages />
             </View>
 
+            <View style={{ height: 20}}>
+
+            </View>
+
+            <WorkExperiencesSection />
+
+            
+            <View style={{ height: 190}}>
+
+            </View>
+
+            <ProjectsSection />
+             
           </View>
         </Page>
       </Document>

@@ -9,7 +9,7 @@ const experiencesWithoutProjects = [
             "Architected and provisioned scalable cloud infrastructure on AWS and GCP using Terraform (IaC), supporting 6,000+ active users; automated deployments across staging and production with GitHub Actions CI/CD pipelines.",
             "Integrated GitHub Copilot to assist code reviews, identify infrastructure cost optimization opportunities, and strengthen observability across all production workloads.",
             "Partnered with pre-sales teams to design and present technical proposals, translating client requirements into actionable architecture plans and effort estimations.",
-            "Enforced Test-Driven Development (TDD) across all projects, achieving ≥80% unit test coverage consistently and driving measurable improvements in code stability and maintainability."
+            "Enforced Test-Driven Development (TDD) across all projects, achieving >= 80% unit test coverage consistently and driving measurable improvements in code stability and maintainability."
         ]
     },
     {
@@ -21,7 +21,7 @@ const experiencesWithoutProjects = [
             "Architected multi-cloud infrastructure on AWS and GCP with Terraform, ensuring high availability, auto-scaling, and disaster recovery for all production workloads.",
             "Implemented an Elasticsearch data synchronization pipeline for the Starbucks JP project using AWS Lambda, enabling real-time product search and operational reporting.",
             "Built end-to-end CI/CD pipelines with GitHub Actions, reducing manual deployment effort, accelerating release cycles, and increasing deployment reliability.",
-            "Achieved ≥80% unit test coverage across all projects through structured code reviews, developer mentoring, and enforced quality gates."
+            "Achieved >= 80% unit test coverage across all projects through structured code reviews, developer mentoring, and enforced quality gates."
         ]
     },
     {
@@ -32,7 +32,7 @@ const experiencesWithoutProjects = [
             "Developed and maintained 2 enterprise-grade products: a Google Calendar synchronization platform, a construction task-management checklist app.",
             "Led infrastructure setup using Docker and GCP with Terraform, ensuring environment parity between development and production and streamlining onboarding for new engineers.",
             "Implemented CI/CD workflows on GitHub Actions integrated with GCP, automating testing and deployment pipelines and reducing manual release effort.",
-            "Maintained ≥80% unit test coverage across all projects and authored comprehensive system design, database design, and setup documentation to enable knowledge transfer."
+            "Maintained >= 80% unit test coverage across all projects and authored comprehensive system design, database design, and setup documentation to enable knowledge transfer."
         ]
     },
     {

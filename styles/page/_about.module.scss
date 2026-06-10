@@ -74,6 +74,106 @@ $bg-card:     #f8f9fc;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
+// ── Projects ────────────────────────────────────────────────────────────────
+.projectsSection {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.projectsIntro {
+    font-size: 0.88rem;
+    color: $text-body;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.projectCard {
+    border: 1px solid #e8ebf0;
+    background: #fcfdff;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.projectTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+    margin: 0;
+    color: $dark-navy;
+    font-size: 0.98rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.projectBadges {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.projectBadge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #3a4153;
+    background: #edf1f8;
+    border-radius: 999px;
+    padding: 3px 9px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.projectBadgeLive {
+    color: #1f6f3f;
+    background: #e7f7ee;
+}
+
+.projectBadgeDone {
+    color: #2456d6;
+    background: #e9f0ff;
+}
+
+.projectSummary {
+    font-size: 0.82rem;
+    color: $text-body;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.projectMetaGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem 0.75rem;
+    margin-bottom: 0.85rem;
+}
+
+.projectMetaItem {
+    font-size: 0.75rem;
+    color: #555;
+
+    strong {
+        color: $dark-navy;
+        font-weight: 700;
+    }
+}
+
+.projectInfoBlock {
+    margin-bottom: 0.75rem;
+}
+
 .companyBlock {
     margin-bottom: 2rem;
 
@@ -193,6 +293,8 @@ $bg-card:     #f8f9fc;
 .projectLabel {
     color: $dark-navy;
     font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
 }
 
 .role {
@@ -200,4 +302,31 @@ $bg-card:     #f8f9fc;
     color: $accent;
     font-weight: 600;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .projectMetaGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .projectsSection,
+    .experienceSection,
+    .summarySection {
+        padding: 1.1rem;
+    }
+
+    .projectTop {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projectBadges {
+        justify-content: flex-start;
+    }
+
+    .projectTitle {
+        font-size: 0.92rem;
+    }
 }

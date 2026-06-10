@@ -16,8 +16,8 @@ const userInfo = {
     languages: {
         title: "Languages",
         listItems: [
-            { label: "Vietnameses", percent: 95 },
-            { label: "English", percent: 65 }
+            { label: "Vietnameses", percent: 95, description: "Native" },
+            { label: "English", percent: 65, description: "Basic verbal communication" }
         ]
     },
 
@@ -40,7 +40,7 @@ const userInfo = {
         groups: [
             {
                 label: "Backend",
-                tags: ["PHP", "Laravel", "Node.js", "NestJS", "C#", "CakePHP", "Yii2", ],
+                tags: ["PHP", "Laravel", "Node.js", "NestJS", "C#", "CakePHP", "Yii2", "Python"],
                 primary: ["PHP", "Laravel", "Node.js", "NestJS", "C#"]
             },
             {

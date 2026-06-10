@@ -8,14 +8,14 @@ function getLevel(percent) {
   return "Basic";
 }
 
-export default function ProgressBar({ label, percent }) {
+export default function ProgressBar({ label, percent, description }) {
   return (
     // .progress-container: margin:2vh 0  (~8pt in PDF)
     <View style={{ marginBottom: 8 }}>
       {/* .progress-header: flex; space-between; color:$text-muted */}
       <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 3 }}>
         <Text style={{ fontSize: 9, color: "#767676" }}>{label}</Text>
-        <Text style={{ fontSize: 9, color: "#767676" }}>{getLevel(percent)}</Text>
+        <Text style={{ fontSize: 9, color: "#767676" }}>{description}</Text>
       </View>
       {/* .progress: padding:2px; border:0.5px solid #FFB400; background:white; border-radius:50px */}
       <View style={{ padding: 2, borderWidth: 0.5, borderColor: "#FFB400", backgroundColor: "white", borderRadius: 50 }}>
